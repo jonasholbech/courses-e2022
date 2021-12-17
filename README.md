@@ -2,6 +2,7 @@
 
 - repo with code snippets for import? works, ineffecient (unless it's incremental in some way)
 - own node server for fetching content?
+  - Then it wont work if the build is remote (netlify) github pages with gh-pages will though
 - figure somethin else out
 
 # Custom Slide Components
