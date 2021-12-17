@@ -10,11 +10,13 @@
     "start": "astro dev",
     "build": "npm-run-all -p --race live-server astro-build",
     "astro-build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.2.2",
     "astro": "^0.21.12",
+    "gh-pages": "^3.2.3",
     "npm-run-all": "^4.1.5"
   }
 }
