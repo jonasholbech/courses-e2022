@@ -1,0 +1,14 @@
+---
+const {code, startFrom=1, lineNumbers="", stretch=false, language="js"} = Astro.props;
+const escaped = code.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+/*const response = await fetch('/t7/01-introduction/snippets/test.js');
+const data = await response.text();
+// Remember: Astro component scripts log to the CLI
+console.log(data);*/
+/*
+   data-noescape 
+*/
+---
+<pre class={stretch ? `r-stretch ${language}`:language}><code data-trim data-ln-start-from={startFrom} data-line-numbers={lineNumbers}>
+{escaped}
+</code></pre>
