@@ -2,6 +2,7 @@
   "name": "@example/starter",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://jonasholbech.github.io/courses-s2022/",
   "scripts": {
     "clean": "rm -rf dist",
     "predev": "npm run clean",
@@ -11,6 +12,7 @@
     "build": "npm-run-all -p --race live-server astro-build",
     "astro-build": "astro build",
     "preview": "astro preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
