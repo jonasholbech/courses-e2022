@@ -8,7 +8,7 @@
     "dev": "npm-run-all -p live-server start",
     "live-server": "live-server -q --no-browser --open=public/snippets/",
     "start": "astro dev",
-    "build": "npm-run-all -p live-server astro-build",
+    "build": "npm-run-all -p --race live-server astro-build",
     "astro-build": "astro build",
     "preview": "astro preview"
   },
