@@ -6,9 +6,10 @@
     "clean": "rm -rf dist",
     "predev": "npm run clean",
     "dev": "npm-run-all -p live-server start",
-    "live-server": "live-server --no-browser --open=public/snippets/",
+    "live-server": "live-server -q --no-browser --open=public/snippets/",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm-run-all -p live-server astro-build",
+    "astro-build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {

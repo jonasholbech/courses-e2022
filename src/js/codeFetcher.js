@@ -1,5 +1,4 @@
 export default async function codeFetcher(folder, data) {
-  console.log(data);
   let returnObj = {};
   await Promise.all(
     data.map(async (path) => {
@@ -9,6 +8,5 @@ export default async function codeFetcher(folder, data) {
       returnObj[path] = await resp.text();
     })
   );
-  console.log(returnObj);
   return returnObj;
 }
