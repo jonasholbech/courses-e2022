@@ -1,14 +1,23 @@
 ---
+import codeFetcher from "../../../js/codeFetcher";
 import SlideLayout from "../../../layouts/SlideLayout.astro";
 import Code from "../../../components/Code.astro";
 import Explainer from "../../../components/Explainer.svelte";
 import Timer from "../../../components/Timer.astro";
 //"https://raw.githubusercontent.com/jonasholbech/foobarnodejs/master/server.js"
-const data = await fetch("https://kea-alt-del.dk/courses/2021/spring/frontend/react/snippets/crazy_buttons/app.js").then(r => r.text());
+const snippets = await codeFetcher([
+    {key:"app", url:"https://kea-alt-del.dk/courses/2021/spring/frontend/react/snippets/crazy_buttons/app.js"},
+    {key:"server", url:"https://raw.githubusercontent.com/jonasholbech/foobarnodejs/master/server.js"}
+])
+/* const appCode = await fetch("https://kea-alt-del.dk/courses/2021/spring/frontend/react/snippets/crazy_buttons/app.js").then(r => r.text());
+const serverCode = await fetch("https://raw.githubusercontent.com/jonasholbech/foobarnodejs/master/server.js").then(r => r.text()); */
 ---
 <SlideLayout title="Introduction">
     <section>
-        <Code code={data} language="jsx" startFrom="2" lineNumbers="3-5|8-10|13-15" stretch/>
+        <Code code={snippets.app} language="jsx" startFrom="2" lineNumbers="3-5|8-10|13-15" stretch/>
+    </section>
+    <section>
+        <Code code={snippets.server} language="js"/>
     </section>
     <section>
         <section>1</section>
