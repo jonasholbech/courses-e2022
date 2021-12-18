@@ -7,6 +7,10 @@
 
 # Custom Slide Components
 
+## `<SlideControls />`
+
+TODO:
+
 ## `<Code ...props>`
 
 | prop          | default | description                              |

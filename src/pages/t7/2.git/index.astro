@@ -1,0 +1,19 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro"
+import SlideControls from "../../../components/SlideControls.astro"
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+
+const snippets = await codeFetcher("t7/1.introduction",[
+    "jens.js",
+    "jonas.js",
+    "stine.js",
+    "lasse.js",
+    
+])
+
+---
+
+<SlideLayout title="Git">
+
+</SlideLayout>
