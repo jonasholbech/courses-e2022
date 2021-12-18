@@ -11,20 +11,23 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-        <link rel="stylesheet" href="../../assets/01-introduction.593955f9.css">
-	<script type="module" src="../../assets/01-introduction.dab4cc2c.js"></script></head>
+        <link rel="stylesheet" href="../../assets/slides.a8c12152.css"><link rel="stylesheet" href="../../assets/test.326bfc90.css">
+	<script type="module" src="../../assets/test.23434878.js"></script></head>
 	<body>
 		<div class="reveal">
         <div class="slides">
 				<section>
-        <pre class="r-stretch jsx"><code data-trim="" data-ln-start-from="2" data-line-numbers="3-5|8-10|13-15">
+    <pre class="r-stretch jsx"><code data-trim="" data-ln-start-from="2" data-line-numbers="3-5|8-10|13-15">
 this.setState({
   likes: this.state.likes + 1
 });
 
 </code></pre>
-    </section><section>
-        <pre class="js"><code data-trim="" data-ln-start-from="1" data-line-numbers="">
+
+   <p><a class="codelink" href="https://github.com/jonasholbech/courses-s2022/tree/main/public/snippets/t7/bad-setstate.js">github</a></p>
+
+  </section><section>
+    <pre class="js"><code data-trim="" data-ln-start-from="1" data-line-numbers="">
 const formIsValid = form.checkValidity();
 if(formIsValid){
     ...
@@ -39,64 +42,156 @@ if(emailIsValid){
     ...
 }
 </code></pre>
-    </section><section>
-        <section>1</section>
-        <section>2</section>
-        <section>3</section>
-    </section><section>
+
+   
+
+  </section><section>
     <h3>Using these slides</h3>
-    <dl>
-        <dt><kbd>esc</kbd></dt><dd> get an overview</dd>
-        <dt><kbd>arrow keys / swipe</kbd></dt><dd> move back, forth, up, down</dd>
-        <dt><kbd>space</kbd></dt><dd> go to the next slide</dd>
-    </dl>
-    </section><section>
-
-  <h2>4 people</h2>
-
-  <ol>
-    <li class="fragment fade-in">Peter <span class="highlight-specialty">"The Savior"</span> Tolstrup (ptoa)</li>
-    <li>Klaus <span class="highlight-specialty">"The Inspector"</span> Mandal (klmh)</li>
-    <li>Jonas <span class="highlight-specialty">"The Tool"</span> Holbech (jofh)</li>
-    <li>Dannie <span class="highlight-specialty">"El Puritan"</span> Vinther (davi)</li>
-  </ol>
-    <astro-root uid="Z2dhx9M"></astro-root>
-       
+<dl>
+    <dt><kbd>esc</kbd></dt><dd> get an overview</dd>
+    <dt><kbd>esc / click</kbd></dt><dd>Select a slide from the overview</dd>
+    <dt><kbd>⬆️ ➡️ ⬇️ ⬅️ / swipe</kbd></dt><dd> move back, forth, up, down</dd>
+    <dt><kbd>space</kbd></dt><dd> go to the next slide</dd>
+</dl>
     
-    </section><section>
-        <iframe src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&amp;time=200" width="300" height="400"></iframe>
-    </section><section>
-  
-  <p>A few words before we look at the Week Plan</p>
-  <p>We:</p>
-  <ol>
-    <li>Asked on "frontenders.dk" (a facebook group)</li>
-    <li>Looked at the <a href="https://github.com/FrontendMasters/front-end-handbook-2019">Front end handbook</a></li>
-    <li>and decided that:</li>
-  </ol>
-</section><section>
-  <div class="col6">
+  </section><section>
+    <h2>4 people</h2>
+    <ol>
+      <li class="fragment fade-in">Peter <span class="highlight-specialty">"The Savior"</span> Tolstrup (ptoa)</li>
+      <li>Klaus <span class="highlight-specialty">"The Inspector"</span> Mandal (klmh)</li>
+      <li>Jonas <span class="highlight-specialty">"The Tool"</span> Holbech (jofh)</li>
+      <li>Dannie <span class="highlight-specialty">"El Puritan"</span> Vinther (davi)</li>
+    </ol>
+    <astro-root uid="Z2dhx9M"></astro-root> 
+  </section><section>
+    <iframe src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&amp;time=200" width="300" height="400"></iframe>
+  </section><section>
+  <h2>Lists</h2>
     <ul>
-      <li>The terminal</li>
-      <li>git</li>
-      <li>Vanilla JS FTW</li>
-      <li>NPM</li>
-      <li>SASS</li>
-      <li>SVG</li>
-      <li>React</li>
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
     </ul>
-  </div>
-  <div class="col6">
-    <ul>
-      <li><span style="text-decoration: line-through">jQuery</span></li>
-      <li><span style="text-decoration: line-through">WordPress</span></li>
-      <li><span style="text-decoration: line-through">Bootstrap</span></li>
-      <li><span style="text-decoration: line-through">Angular/Vue</span></li>
-      <li><span style="text-decoration: line-through">YARN</span></li>
-      <li><span style="text-decoration: line-through">LESS</span></li>
+    <hr>
+    <ol>
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
+    </ol>
+  </section><section>
+    <h3><code>.listed</code></h3>
+    <ul class="listed">
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
     </ul>
-  </div>
-</section>
+    <hr>
+    <h3><code>.huge</code></h3>
+    <ul class="huge">
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
+    </ul>
+  </section><section>
+    <h3><code>.striped</code></h3>
+    <ul class="striped">
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
+    </ul>
+    <hr>
+    <ol class="striped">
+      <li>Zebra</li>
+      <li>Giraffe</li>
+      <li>Elephant</li>
+    </ol>
+  </section><section>
+    <h3>code</h3>
+    <p>here comes some <code>code(argument)</code></p>
+    <h3>kbd</h3>
+    <p>and a <kbd>kbd</kbd> element</p>
+  </section><section>
+    <h3>tables</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>        
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>      
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>      
+          <td>80</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3><code>.striped</code></h3>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>        
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>      
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>      
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>      
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>      
+          <td>80</td>
+        </tr>
+      </tbody>
+    </table>
+  </section><section>
+    <img src="../public/assets/logo.svg" alt="">
+  </section><section>
+    <h2><code>.stricken</code></h2>
+    <p class="stricken">im stricken</p>
+    <hr>
+    <ol class="stricken">
+      <li>so is</li>
+      <li>this list</li>
+    </ol>
+    <hr>
+    <ol>
+      <li>but not</li>
+      <li class="stricken">everything here</li>
+    </ol>
+  </section>
 			</div>
 		</div>
 
