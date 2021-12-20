@@ -65,7 +65,7 @@ const snippets = await codeFetcher("t7/2.git",[
   </section>
   <section>
   <p>{Astro.site.pathname}</p>
-    <img data-src='/courses-s2022/assets/t7/2.git/git-meme1.jpg'  alt="" />
+    <img data-src={Astro.site.pathname+'/assets/t7/2.git/git-meme1.jpg'}  alt="" />
     <p class="fragment">No, but you do cry when you loose all your work</p>
     <p class="fragment">You just need to memorize a few work-processes</p>
     <p class="fragment">
@@ -107,7 +107,7 @@ const snippets = await codeFetcher("t7/2.git",[
     <div class="col-6">
         <p>
         <video
-        data-src="/assets/t7/2.git/install-extensions.mov.mp4"
+        data-src={Astro.site.pathname+"/assets/t7/2.git/install-extensions.mov.mp4"}
             height="200"
             controls
         ></video>
@@ -169,7 +169,7 @@ const snippets = await codeFetcher("t7/2.git",[
     </ol>
     <p>
       <video
-      data-src='/assets/t7/2.git/create-project.mov.mp4'
+      data-src={Astro.site.pathname+'/assets/t7/2.git/create-project.mov.mp4'}
         height="300"
         controls
       ></video>
