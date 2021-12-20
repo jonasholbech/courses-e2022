@@ -1,10 +1,9 @@
 ---
 import SlideLayout from "../../../layouts/SlideLayout.astro"
-import SlideControls from "../../../components/SlideControls.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 
-const snippets = await codeFetcher("t7/1.introduction",[
+const snippets = await codeFetcher("t7/2.git",[
     "jens.js",
     "jonas.js",
     "stine.js",
@@ -20,7 +19,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
 </section>
 <section>
   <h3>Today</h3>
-  <ol class="small" style="column-count: 2; column-gap: 4rem">
+  <ol class="small" style="column-count: 2; column-gap: 6rem">
     <li>Left-overs from yesterday</li>
     <li>git, what is it</li>
     <li>Prerequisites</li>
@@ -43,7 +42,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
     <h1>Left-overs</h1>
   </section>
   <section>
-    <ol>
+    <ol> 
       <li>The assignment</li>
       <li>Introduction to VS Code</li>
       <li>Anything else?</li>
@@ -65,7 +64,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
     <p class="fragment small">And as long as we do not loose work, I'm happy</p>
   </section>
   <section>
-    <img data-src="gfx/git-brackets/git-meme1.jpg" alt="" />
+    <img data-src={Astro.resolve('gfx/git-meme1.jpg')}  alt="" />
     <p class="fragment">No, but you do cry when you loose all your work</p>
     <p class="fragment">You just need to memorize a few work-processes</p>
     <p class="fragment">
@@ -91,31 +90,33 @@ const snippets = await codeFetcher("t7/1.introduction",[
   <section>
     <h2>Prerequisites</h2>
     <p>Instructions on fronter (Install Day)</p>
-    <div class="col6">
-    <ol>
-      <li>VSCode</li>
-      <li>Git</li>
-      <li>GitHub account</li>
-      <li>Live Server</li>
-      <li>GitLens</li>
-      <li>axe Accessibility Linter</li>
-      <li>Error Lens</li>
-      <li>Prettier</li>
-    </ol>
-</div>
-<div class="col6">
-    <p>
-      <video
-      data-src="gfx/git-vs-code/install-extensions.mov.mp4"
-        height="200"
-        controls
-      ></video>
-    </p>
-</div>
+    <div class="flex-grid">
+    <div class="col-6">
+        <ol>
+        <li>VSCode</li>
+        <li>Git</li>
+        <li>GitHub account</li>
+        <li>Live Server</li>
+        <li>GitLens</li>
+        <li>axe Accessibility Linter</li>
+        <li>Error Lens</li>
+        <li>Prettier</li>
+        </ol>
+    </div>
+    <div class="col-6">
+        <p>
+        <video
+        data-src={Astro.resolve('gfx/install-extensions.mov.mp4')}
+            height="200"
+            controls
+        ></video>
+        </p>
+    </div>
+    </div>
   </section>
 </section>
 <section>
-  <section><h1>A short interactive tour</h1><h2>Exercise #1</h2></section>
+  <section><h2>A short inter&shy;­active tour</h2><h3>Exercise #1</h3></section>
   <section>
     <h2>gitfographic&lt;3</h2>
     <p>
@@ -147,34 +148,6 @@ const snippets = await codeFetcher("t7/1.introduction",[
       <li><code>local</code></li>
       <li><code>.gitignore</code></li>
     </ul>
-    <!-- <h2>Recap +1</h2>
-    <dl>
-      <dt>Add</dt>
-      <dd class="fragment">
-        Mark the file to be part of a commit (in VS Code, that was checking off
-        the file)
-      </dd>
-
-      <dt>Commit</dt>
-      <dd class="fragment">A save game</dd>
-
-      <dt>git</dt>
-      <dd class="fragment">The version control system</dd>
-
-      <dt>init</dt>
-      <dd class="fragment">Initialize the repository (done once)</dd>
-
-      <dt>Push</dt>
-      <dd class="fragment">Put your commits (and code) to the remote</dd>
-
-      <dt>Remote</dt>
-      <dd class="fragment">
-        An external place where our code is stored, often GitHub
-      </dd>
-
-      <dt>Repository</dt>
-      <dd class="fragment">A folder, monitored by git</dd>
-    </dl> -->
   </section>
 </section>
 
@@ -195,7 +168,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
     </ol>
     <p>
       <video
-      data-src="gfx/git-vs-code/create-project.mov.mp4"
+      data-src={Astro.resolve('gfx/create-project.mov.mp4')}
         height="300"
         controls
       ></video>
@@ -214,7 +187,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
     <p><small>Sorry about the sound :-)</small></p>
     <p>
       <video
-      data-src="gfx/git-vs-code/initialize-repository.mov.mp4"
+      data-src={Astro.resolve('gfx/initialize-repository.mov.mp4')}
         height="400"
         controls
       ></video>
@@ -225,7 +198,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
       <li>In VS Code, <code>add</code> (+) all the files you need</li>
       <li>Write a meaningfull message and click <code>commit</code> (V)</li>
     </ol>
-    <video data-src="gfx/git-vs-code/first-commit.mov.mp4" height="300" controls></video>
+    <video data-src={Astro.resolve('gfx/first-commit.mov.mp4')} height="300" controls></video>
   </section>
   <section>
     <p>Now you have version control locally.</p>
@@ -235,7 +208,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
 <section>
   <section><h1>Exercise #2</h1></section>
   <section>
-    <ol class="alternate">
+    <ol class="striped">
       <li>Split into groups (2-3 people)</li>
       <li>
         Player A: follow the steps above, talk each other
@@ -282,7 +255,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
       <li>You can click "Open in GitHub" to see you new repository</li>
     </ol>
     <video
-    data-src="gfx/git-vs-code/publish-to-github.mov.mp4"
+    data-src={Astro.resolve('gfx/publish-to-github.mov.mp4')}
       height="300"
       controls
     ></video>
@@ -311,7 +284,7 @@ const snippets = await codeFetcher("t7/1.introduction",[
   </section>
 </section>
 <section>
-  <section><h1>A short interactive tour</h1><h2>Exercise #4</h2></section>
+  <section><h2>A short interactive tour</h2><h3>Exercise #4</h3></section>
   <section>
     <h2>gitfographic&lt;3</h2>
     <p>

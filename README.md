@@ -4,6 +4,7 @@
 - own node server for fetching content?
   - Then it wont work if the build is remote (netlify) github pages with gh-pages will though
 - figure somethin else out
+- external links in new window
 
 # Custom Slide Components
 
@@ -20,6 +21,7 @@ TODO:
 | `lineNumbers` | `""`    | Highlight specific line, see Reveal docs |
 | `stretch`     | `false` | Stretch code view, for large snippets    |
 | `language`    | `"js"`  | code language, not tested                |
+| `path`        | `null`  | TODO:                                    |
 
 ## `<Explainer ...props>`
 

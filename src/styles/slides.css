@@ -27,7 +27,7 @@
   background-color: #555;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -1px 0 rgba(0, 0, 0, 0.25);
 }
 .reveal blockquote {
   width: auto;
@@ -103,6 +103,7 @@ rect {
   list-style-position: inside;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 1rem;
 }
 .reveal .striped li:nth-child(odd),
 .reveal .striped tbody tr:nth-child(even) {
@@ -110,6 +111,15 @@ rect {
   color: var(--color-reversed);
 }
 
+/* .alternate > li:nth-child(odd) {
+  color: #1b91ff;
+}
+.alternate > p:nth-child(odd) {
+  background-color: hsla(0, 0%, 23%);
+}
+.alternate > p:nth-child(even) {
+  background-color: hsla(0, 0%, 13%);
+} */
 .codelink {
   font-size: 0.9rem;
 }
@@ -120,6 +130,48 @@ rect {
 }
 .reveal .slides .small {
   font-size: 0.7em;
+}
+
+/*FLEX-GRID*/
+.flex-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.col-1 {
+  width: 7.05%;
+}
+.col-2 {
+  width: 15.5%;
+}
+.col-3 {
+  width: 23.95%;
+}
+.col-4 {
+  width: 32.4%;
+}
+.col-5 {
+  width: 40.85%;
+}
+.col-6 {
+  width: 49.3%;
+}
+.col-7 {
+  width: 57.75%;
+}
+.col-8 {
+  width: 66.2%;
+}
+.col-9 {
+  width: 74.65%;
+}
+.col-10 {
+  width: 83.1%;
+}
+.col-11 {
+  width: 91.55%;
+}
+.col-12 {
+  width: 100%;
 }
 /*courseSlides.css*/
 /*
@@ -285,12 +337,7 @@ rect {
   
 
   
-  .alternate > p:nth-child(odd) {
-    background-color: hsla(0, 0%, 23%);
-  }
-  .alternate > p:nth-child(even) {
-    background-color: hsla(0, 0%, 13%);
-  }
+  
   
   .reveal .lowercase {
     text-transform: lowercase;
@@ -332,9 +379,7 @@ rect {
       border: 10px solid hotpink;
     }
   }
-  .alternate > li:nth-child(odd) {
-    color: #1b91ff;
-  }
+  
   
   .highlight {
     color: #1b91ff;
