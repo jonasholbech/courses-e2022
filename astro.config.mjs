@@ -10,4 +10,7 @@
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Set "renderers" to "[]" to disable all default, builtin component support.
   renderers: ["@astrojs/renderer-svelte"],
+  buildOptions: {
+    site: "https://jonasholbech.github.io/courses-s2022",
+  },
 });

@@ -10,6 +10,7 @@
     "live-server": "live-server -q --no-browser --open=public/snippets/",
     "start": "astro dev",
     "build": "npm-run-all -p --race live-server astro-build",
+    "postbuild": "cd dist && touch .nojekyll",
     "astro-build": "astro build",
     "preview": "astro preview",
     "predeploy": "npm run build",
