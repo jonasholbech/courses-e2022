@@ -11,7 +11,7 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.2.1/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-        <link rel="stylesheet" href="../../assets/slides.a8c12152.css"><link rel="stylesheet" href="../../assets/2.git.92978933.css">
+        <link rel="stylesheet" href="../../assets/slides.6ef78353.css"><link rel="stylesheet" href="../../assets/2.git.92978933.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -20,7 +20,7 @@
   <h1><code>git</code></h1>
 </section><section>
   <h3>Today</h3>
-  <ol class="small" style="column-count: 2; column-gap: 4rem">
+  <ol class="small" style="column-count: 2; column-gap: 6rem">
     <li>Left-overs from yesterday</li>
     <li>git, what is it</li>
     <li>Prerequisites</li>
@@ -42,7 +42,7 @@
     <h1>Left-overs</h1>
   </section>
   <section>
-    <ol>
+    <ol> 
       <li>The assignment</li>
       <li>Introduction to VS Code</li>
       <li>Anything else?</li>
@@ -63,7 +63,7 @@
     <p class="fragment small">And as long as we do not loose work, I'm happy</p>
   </section>
   <section>
-    <img data-src="gfx/git-brackets/git-meme1.jpg" alt="">
+    <img data-src="/src/pages/t7/2.git/gfx/git-meme1.jpg" alt="">
     <p class="fragment">No, but you do cry when you loose all your work</p>
     <p class="fragment">You just need to memorize a few work-processes</p>
     <p class="fragment">
@@ -88,26 +88,28 @@
   <section>
     <h2>Prerequisites</h2>
     <p>Instructions on fronter (Install Day)</p>
-    <div class="col6">
-    <ol>
-      <li>VSCode</li>
-      <li>Git</li>
-      <li>GitHub account</li>
-      <li>Live Server</li>
-      <li>GitLens</li>
-      <li>axe Accessibility Linter</li>
-      <li>Error Lens</li>
-      <li>Prettier</li>
-    </ol>
-</div>
-<div class="col6">
-    <p>
-      <video data-src="gfx/git-vs-code/install-extensions.mov.mp4" height="200" controls=""></video>
-    </p>
-</div>
+    <div class="flex-grid">
+    <div class="col-6">
+        <ol>
+        <li>VSCode</li>
+        <li>Git</li>
+        <li>GitHub account</li>
+        <li>Live Server</li>
+        <li>GitLens</li>
+        <li>axe Accessibility Linter</li>
+        <li>Error Lens</li>
+        <li>Prettier</li>
+        </ol>
+    </div>
+    <div class="col-6">
+        <p>
+        <video data-src="/src/pages/t7/2.git/gfx/install-extensions.mov.mp4" height="200" controls=""></video>
+        </p>
+    </div>
+    </div>
   </section>
 </section><section>
-  <section><h1>A short interactive tour</h1><h2>Exercise #1</h2></section>
+  <section><h2>A short inter­­active tour</h2><h3>Exercise #1</h3></section>
   <section>
     <h2>gitfographic&lt;3</h2>
     <p>
@@ -137,34 +139,6 @@
       <li><code>local</code></li>
       <li><code>.gitignore</code></li>
     </ul>
-    <!-- <h2>Recap +1</h2>
-    <dl>
-      <dt>Add</dt>
-      <dd class="fragment">
-        Mark the file to be part of a commit (in VS Code, that was checking off
-        the file)
-      </dd>
-
-      <dt>Commit</dt>
-      <dd class="fragment">A save game</dd>
-
-      <dt>git</dt>
-      <dd class="fragment">The version control system</dd>
-
-      <dt>init</dt>
-      <dd class="fragment">Initialize the repository (done once)</dd>
-
-      <dt>Push</dt>
-      <dd class="fragment">Put your commits (and code) to the remote</dd>
-
-      <dt>Remote</dt>
-      <dd class="fragment">
-        An external place where our code is stored, often GitHub
-      </dd>
-
-      <dt>Repository</dt>
-      <dd class="fragment">A folder, monitored by git</dd>
-    </dl> -->
   </section>
 </section><section>
   <section>
@@ -182,7 +156,7 @@
       </li>
     </ol>
     <p>
-      <video data-src="gfx/git-vs-code/create-project.mov.mp4" height="300" controls=""></video>
+      <video data-src="/src/pages/t7/2.git/gfx/create-project.mov.mp4" height="300" controls=""></video>
     </p>
   </section>
   <section>
@@ -197,7 +171,7 @@
     </ol>
     <p><small>Sorry about the sound :-)</small></p>
     <p>
-      <video data-src="gfx/git-vs-code/initialize-repository.mov.mp4" height="400" controls=""></video>
+      <video data-src="/src/pages/t7/2.git/gfx/initialize-repository.mov.mp4" height="400" controls=""></video>
     </p>
   </section>
   <section>
@@ -205,7 +179,7 @@
       <li>In VS Code, <code>add</code> (+) all the files you need</li>
       <li>Write a meaningfull message and click <code>commit</code> (V)</li>
     </ol>
-    <video data-src="gfx/git-vs-code/first-commit.mov.mp4" height="300" controls=""></video>
+    <video data-src="/src/pages/t7/2.git/gfx/first-commit.mov.mp4" height="300" controls=""></video>
   </section>
   <section>
     <p>Now you have version control locally.</p>
@@ -214,7 +188,7 @@
 </section><section>
   <section><h1>Exercise #2</h1></section>
   <section>
-    <ol class="alternate">
+    <ol class="striped">
       <li>Split into groups (2-3 people)</li>
       <li>
         Player A: follow the steps above, talk each other
@@ -259,7 +233,7 @@
       </li>
       <li>You can click "Open in GitHub" to see you new repository</li>
     </ol>
-    <video data-src="gfx/git-vs-code/publish-to-github.mov.mp4" height="300" controls=""></video>
+    <video data-src="/src/pages/t7/2.git/gfx/publish-to-github.mov.mp4" height="300" controls=""></video>
   </section>
 
   <section>
@@ -283,7 +257,7 @@
     </p>
   </section>
 </section><section>
-  <section><h1>A short interactive tour</h1><h2>Exercise #4</h2></section>
+  <section><h2>A short interactive tour</h2><h3>Exercise #4</h3></section>
   <section>
     <h2>gitfographic&lt;3</h2>
     <p>
@@ -345,13 +319,13 @@
     <h3><code>checkout</code></h3>
     <p>Looking at a point in time</p>
     <p>You can look, but you can't (shouldn't) touch</p>
-    <video height="200" data-src="gfx/git-vs-code/checkout.mov.mp4" controls=""></video>
-    <p><small>(this one has audio)</small></p>
+    <video height="200" data-src="/src/pages/t7/2.git/gfx/checkout.mov.mp4" controls=""></video>
+    <p><small>(No audio)</small></p>
   </section>
   <section>
     <h3>Going back to our timeline</h3>
     <p>Once we've looked, we can go back to our own timeline (master)</p>
-    <video height="200" data-src="gfx/git-vs-code/back-to-master.mov.mp4" controls=""></video>
+    <video height="200" data-src="/src/pages/t7/2.git/gfx/back-to-master.mov.mp4" controls=""></video>
     <p><small>(this one has audio)</small></p>
   </section>
   <section>
