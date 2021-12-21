@@ -115,7 +115,9 @@ rect {
   background-color: var(--background-reversed);
   color: var(--color-reversed);
 }
-
+.reveal .lowercase {
+  text-transform: lowercase;
+}
 /* .alternate > li:nth-child(odd) {
   color: #1b91ff;
 }
@@ -341,9 +343,7 @@ rect {
   
   
   
-  .reveal .lowercase {
-    text-transform: lowercase;
-  }
+  
   twitter-widget {
     overflow: auto;
   }
