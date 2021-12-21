@@ -9,6 +9,7 @@
 /*/general elements*/
 .reveal p code {
   color: orange;
+  font-family: var(--r-code-font);
 }
 .reveal h1 code,
 .reveal h2 code,
@@ -18,6 +19,10 @@
 .reveal h6 code {
   text-transform: none;
   font-family: var(--r-code-font);
+}
+.reveal .slides var {
+  font-family: var(--r-code-font);
+  color: orange;
 }
 .reveal kbd {
   font-family: monospace, monospace;
@@ -205,10 +210,7 @@ rect {
     border-left-color: #aa6932;
   }
   
-  .reveal .slides var {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter",
-      "Lucida Typewriter", monospace;
-  }
+  
   .reveal .slides .left {
     text-align: left;
   }

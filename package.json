@@ -12,7 +12,7 @@
     "astro-build": "astro build",
     "preview": "astro preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "node deploy.js"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.2.2",
