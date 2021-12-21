@@ -6,6 +6,7 @@
 - figure somethin else out
 - external links in new window
 - base href to control build?
+- FTP deploy
 
 # Custom Slide Components
 
