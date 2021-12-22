@@ -8,6 +8,7 @@
 - base href to control build?
 - FTP deploy
 - Gauge component
+- plugins: chalkboard, reveal menu
 
 # Custom Slide Components
 

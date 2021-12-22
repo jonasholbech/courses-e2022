@@ -13,7 +13,11 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     "callbacks-simple-4.js",
     "callbacks-simple-5.js",
     "arrays-intro.js",
-    "array-objects.js"
+    "array-objects.js",
+    "arrays-zero-index.js",
+    "arrays-foreach.js",
+    "arrays-foreach2.js",
+    "array-foreach-template.js"
 ])
 
 ---
@@ -358,16 +362,13 @@ of a web page, without reloading the whole page.
   <section>
     <h4>Using arrays</h4>
     <p>We access arrays using a "zero based index"</p>
-    <pre><code class="js">const animals = ["Monkey", "Chicken"];
-const firstAnimal = animals[0];
-const secondAnimal = animals[1];
-    </code></pre>
+    <Code code={snippets['arrays-zero-index.js']} />
   </section>
   
   <section>
   <h4>Using arrays</h4>
     <p>or by "looping" through them one at a time</p>
-    <pre><code class="js" data-source="4/arrays-foreach.js"></code></pre>
+    <Code code={snippets["arrays-foreach.js"]} />
   </section>
 
   <section>
@@ -378,7 +379,7 @@ const secondAnimal = animals[1];
   <section>
     <p>What if it was an array of objects?</p>
     <p>Easy, peasy</p>
-    <pre><code class="js stretch" data-source="4/arrays-foreach2.js"></code></pre>
+    <Code code={snippets["arrays-foreach2.js"]} stretch />
   </section>
 </section>
 
@@ -404,7 +405,7 @@ const secondAnimal = animals[1];
     </ol>
   </section>
   <section>
-    <pre><code class="js stretch" data-source="4/array-foreach-template.js"></code></pre>
+    <Code code={snippets["array-foreach-template.js"]} stretch />
   </section>
 </section>
 
@@ -417,7 +418,7 @@ const secondAnimal = animals[1];
     <h2>Bonus exercise</h2>
     <p>Aren't you lucky</p>
     <ul>
-      <li>If you forked before you cloned you can now add=>commit=>push directly</li>
+      <li>If you forked before you cloned you can now <var>add =&gt; commit =&gt; push</var> directly</li>
       <li>DO IT</li>
       <li>Since it's now YOUR repository, we can turn on GitHub Pages</li>
       <li><a href="https://youtu.be/DSfIkMgDUo0">Follow the instructions in this link</a></li>
