@@ -7,6 +7,7 @@
 - external links in new window
 - base href to control build?
 - FTP deploy
+- Gauge component
 
 # Custom Slide Components
 

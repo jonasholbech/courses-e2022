@@ -7,6 +7,8 @@ const snippets = await codeFetcher("t7/4.objects",[
     "objects1.js",
     "objects2.js",
     "objects3.js",
+    "objects-templates.html",
+    "objects-templates.js",
 ])
 
 ---
@@ -107,37 +109,10 @@ const snippets = await codeFetcher("t7/4.objects",[
     </ol>
   </section>
   <section>
-    <h3>A bit more advanced</h3>
+    <h3>How do we find ...</h3>
     <Code code={snippets["objects3.js"]} path="t7/4.objects/objects3.js" language="js"  stretch/>
-    <p><small>How do we find ...</small></p>
   </section>
 </section>
-
-<!--<section>
-  <section>
-    <h1>JSON</h1>
-    <p>JavaScript Object Notation</p>
-  </section>
-  <section>
-    <h3>What?</h3>
-    <p>By now, the standard way of transferring data between:</p>
-    <ul>
-      <li>programming languages</li>
-      <li>client / server</li>
-    </ul>
-    <p>It's based on JS objects, and fairly straight forward</p>
-  </section>
-
-  <section>
-    <h3>JSON syntax</h3>
-    <ul>
-      <li>Properties are in quotes</li>
-      <li>We do not define a variable for it</li>
-    </ul>
-    <pre><code class="js" data-source="3/json.json"></code></pre>
-    <p>The beautifull part is, once it's loaded, we access it like JS objects</p>
-  </section>
-</section>-->
 
 <section>
   <section>
@@ -148,8 +123,8 @@ const snippets = await codeFetcher("t7/4.objects",[
       Combining <code>object</code>'s with the <code>&lt;template&gt;</code> is
       easy (if we understood <code>&lt;template&gt;</code>'s the first time)
     </p>
-    <pre><code class="html" data-source="3/objects-templates.html"></code></pre>
-    <pre><code class="js" data-source="3/objects-templates.js"></code></pre>
+    <Code code={snippets["objects-templates.html"]} path="t7/4.objects/objects-templates.html" language="html"/>
+    <Code code={snippets["objects-templates.js"]} path="t7/4.objects/objects-templates.js" language="js"/>
   </section>
 </section>
 
@@ -166,28 +141,4 @@ const snippets = await codeFetcher("t7/4.objects",[
   <p class="fragment">Article: Steve Schoeger Tweets</p>
   <p class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</p>
 </section>
-
-<script src="../gauge.min.js"></script>
-<script>
-  (function readyHack() {
-    console.log("readyhack", "Reveal" in window);
-    if (!("Reveal" in window)) {
-      console.log("st");
-      setTimeout(readyHack, 500);
-    } else {
-      Reveal.addEventListener("fragmentshown", function (event) {
-        // event.fragment = the fragment DOM element
-        if (event.fragment.id === "gauge2") {
-          var gauge2 = Gauge(document.getElementById("gauge2"), {
-            max: 100,
-            dialStartAngle: 120,
-            dialEndAngle: 60,
-            value: 0,
-          });
-          gauge2.setValueAnimated(90, 2);
-        }
-      });
-    }
-  })();
-</script>
 </SlideLayout>

@@ -1,3 +1,26 @@
+<script src="../gauge.min.js"></script>
+<script>
+  (function readyHack() {
+    console.log("readyhack", "Reveal" in window);
+    if (!("Reveal" in window)) {
+      console.log("st");
+      setTimeout(readyHack, 500);
+    } else {
+      Reveal.addEventListener("fragmentshown", function (event) {
+        // event.fragment = the fragment DOM element
+        if (event.fragment.id === "gauge2") {
+          var gauge2 = Gauge(document.getElementById("gauge2"), {
+            max: 100,
+            dialStartAngle: 120,
+            dialEndAngle: 60,
+            value: 0,
+          });
+          gauge2.setValueAnimated(90, 2);
+        }
+      });
+    }
+  })();
+</script>
 <div id="gauge2" class="gauge-container two" />
 
 <style>
