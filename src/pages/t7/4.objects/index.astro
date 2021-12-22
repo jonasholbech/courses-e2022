@@ -1,0 +1,193 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro"
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+import Pacman from "./components/Pacman.astro";
+const snippets = await codeFetcher("t7/4.objects",[
+    "objects1.js",
+    "objects2.js",
+    "objects3.js",
+])
+
+---
+
+<SlideLayout title="Objects">
+
+<section>
+  <h1>Objects</h1>
+  <h3>jofh@kea.dk</h3>
+</section>
+<section>
+  <h2>Agenda</h2>
+  <ul>
+    <li>A quote I read</li>
+    <li>A little challenge</li>
+    <li>Objects</li>
+    <li>Objects &amp; the &lt;template&gt;</li>
+  </ul>
+</section>
+<section>
+  <section>
+    <h1>A quote I read</h1>
+  </section>
+  <section>
+    <blockquote>
+      <p>
+        The "smart" in a smartphone doesn't come from the computer chips, but
+        from the people who program them.
+      </p>
+      <p>
+        Computers are the most powerful tools mankind has ever created, yet
+        they're under-utilized because few people know how to unleash their full
+        potential.
+      </p>
+      <p>
+        In a world where everything is a computer, the most important people are
+        the programmers who can realise their full potential
+      </p>
+    </blockquote>
+    <cite>Learning Python with Raspberry Pi</cite>
+  </section>
+</section>
+<section>
+  <section>
+    <h1>A little challenge</h1>
+  </section>
+  <section>
+    <Pacman />
+    <p class="fragment">How was this made?</p>
+    <p class="fragment">Try using the inspector to figure it out</p>
+  </section>
+</section>
+<section>
+  <section>
+    <h1>Objects</h1>
+  </section>
+  <section>
+    <p>What is an object?</p>
+    <ol>
+      <li class="fragment">It's a representation of something</li>
+      <li class="fragment">It's an abstraction</li>
+      <li class="fragment">It's a logical grouping</li>
+      <li class="fragment">It's a data structure</li>
+    </ol>
+    <p>You have already worked with a lot</p>
+
+    <pre
+      class="fragment"
+    ><code class="js">document.querySelector("selector")</code></pre>
+    <pre class="fragment"><code class="js">elem.classList</code></pre>
+    <pre class="fragment"><code class="js">...</code></pre>
+  </section>
+  <section>
+    <h3>Objects in JavaScript</h3>
+    <Code code={snippets["objects1.js"]}  language="js" />
+    <p>Objects are created using <code>{`{ }`}</code></p>
+    <p>
+      It has a set of property/value pairs, <br />separated by <code>:</code><br />ended with
+      a <code>,</code>
+    </p>
+  </section>
+  <section>
+    <h3>Working with objects</h3>
+    <p>Values are accessed using the <code>.</code> (dot) notation</p>
+    <Code code={snippets["objects1.js"]}  language="js" />
+    <Code code={snippets["objects2.js"]}  language="js" />
+  </section>
+  <section>
+    <p>
+      We often see arrays of objects, arrays in objects, objects in objects etc
+    </p>
+    <p>Learning to navigate these structures is important</p>
+    <p>&nbsp;</p>
+    <p>Remember:</p>
+    <ol>
+      <li>Objects / properties are accessed using <code>.</code></li>
+      <li>Arrays are accessed using <code>[ ]</code></li>
+    </ol>
+  </section>
+  <section>
+    <h3>A bit more advanced</h3>
+    <Code code={snippets["objects3.js"]} path="t7/4.objects/objects3.js" language="js"  stretch/>
+    <p><small>How do we find ...</small></p>
+  </section>
+</section>
+
+<!--<section>
+  <section>
+    <h1>JSON</h1>
+    <p>JavaScript Object Notation</p>
+  </section>
+  <section>
+    <h3>What?</h3>
+    <p>By now, the standard way of transferring data between:</p>
+    <ul>
+      <li>programming languages</li>
+      <li>client / server</li>
+    </ul>
+    <p>It's based on JS objects, and fairly straight forward</p>
+  </section>
+
+  <section>
+    <h3>JSON syntax</h3>
+    <ul>
+      <li>Properties are in quotes</li>
+      <li>We do not define a variable for it</li>
+    </ul>
+    <pre><code class="js" data-source="3/json.json"></code></pre>
+    <p>The beautifull part is, once it's loaded, we access it like JS objects</p>
+  </section>
+</section>-->
+
+<section>
+  <section>
+    <h1>Objects &amp; the <code>&lt;template&gt;</code></h1>
+  </section>
+  <section>
+    <p>
+      Combining <code>object</code>'s with the <code>&lt;template&gt;</code> is
+      easy (if we understood <code>&lt;template&gt;</code>'s the first time)
+    </p>
+    <pre><code class="html" data-source="3/objects-templates.html"></code></pre>
+    <pre><code class="js" data-source="3/objects-templates.js"></code></pre>
+  </section>
+</section>
+
+<section>
+  <h1>Exercise</h1>
+  <p>Fronter: "2. Cloning / Templating"</p>
+</section>
+
+<section>
+  <h2>Your +5</h2>
+  <p class="fragment">Fronter: "3. CSS Diner"</p>
+  <p class="fragment">Fronter: "4. Read tomorrows slides"</p>
+  <p class="fragment">Article: Labels are a last resort</p>
+  <p class="fragment">Article: Steve Schoeger Tweets</p>
+  <p class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</p>
+</section>
+
+<script src="../gauge.min.js"></script>
+<script>
+  (function readyHack() {
+    console.log("readyhack", "Reveal" in window);
+    if (!("Reveal" in window)) {
+      console.log("st");
+      setTimeout(readyHack, 500);
+    } else {
+      Reveal.addEventListener("fragmentshown", function (event) {
+        // event.fragment = the fragment DOM element
+        if (event.fragment.id === "gauge2") {
+          var gauge2 = Gauge(document.getElementById("gauge2"), {
+            max: 100,
+            dialStartAngle: 120,
+            dialEndAngle: 60,
+            value: 0,
+          });
+          gauge2.setValueAnimated(90, 2);
+        }
+      });
+    }
+  })();
+</script>
+</SlideLayout>

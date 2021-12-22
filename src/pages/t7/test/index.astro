@@ -3,7 +3,8 @@ import codeFetcher from "../../../js/codeFetcher";
 import SlideLayout from "../../../layouts/SlideLayout.astro";
 import Code from "../../../components/Code.astro";
 import Explainer from "../../../components/Explainer.svelte";
-import Timer from "../../../components/Timer.astro";
+//import Timer from "../../../components/Timer.astro";
+import Timer from "../../../components/Timer.svelte";
 import SlideControls from "../../../components/SlideControls.astro";
 
 const snippets = await codeFetcher("test",[
@@ -85,7 +86,7 @@ const snippets = await codeFetcher("test",[
   ]}/> 
   </section>
   <section>
-    <Timer time="200" width="300" height="400" />
+    <Timer time="200" width="300" height="400" client:only/>
   </section>
 
   <section>
@@ -224,63 +225,3 @@ const snippets = await codeFetcher("test",[
     </ol>
   </section>
 </SlideLayout>
-
-
-
-<!-- 
-    <section>
-  <section>
-    <h1>The Exam</h1>
-  </section>
-  <section>
-    <p class="fragment">everyone MUST code</p>
-    <p class="fragment">That means JS &amp; CSS</p>
-    <p class="fragment">you cannot pass without it!</p>
-    <p class="fragment">git and branches must be actively used</p>
-  </section>
-  <section>
-    <ol>
-      <li>4 weeks to do your project</li>
-      <li>30 minutes (per person) oral exam, including grading</li>
-      <li>Groups of 2-3 people</li>
-      <li>All mandatory assignments must be passed to qualify for the exam (more in a few minutes)</li>
-      <li>"Report": 12 pages plus 3 per group member<br>
-        <pre><code class="js">const pages = 12 + groupmembers.length * 3;</code></pre>
-      </li>
-    </ol>
-  </section>
-  <section>
-    <h3>Mandatory assignments (MA)</h3>
-    <ul>
-      <li>All MA's must be passed in order to qualify for the exam</li>
-      <li>All MA's have a deadline, assignments handed in, in due time, are given feedback, late deliveries are not</li>
-      <li>Technically, you can hand in the MA's when you start your exam project
-        <ul><li>BUT DON'T WAIT THAT LONG</li></ul>
-      </li>
-      <li>There is a total of 4 MA's</li>
-    </ul>
-  </section>
-</section>
-<section>
-<h2><a href="https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=4622&LocationType=1">The week plan</a></h2>
-</section>
-    <section>
-  <section>
-    <h1>Final thoughts</h1>
-  </section>
-  <section>
-    <ol>
-      <li>I have done this 5-6  times, and we have a few experiences we wanna share</li>
-      <li class="fragment">Covid-19 is still lurking, but we've tried that before and it went fine. Be active, share, discuss and all will benefit</li>
-      <li class="fragment">Socialize</li>
-      <li class="fragment">YOU have a responsibility, be active on Teams, ask questions, share what you've got
-        <ul>
-          <li>community</li>
-          <li>there is no shame</li>
-      </ul>
-      </li>
-      <li class="fragment"><a href="https://mit.kea.dk/en/corona-virus">https://mit.kea.dk/en/corona-virus</a></li>
-    </ol>
-  </section>
-</section> -->
- 
