@@ -13,3 +13,12 @@ Reveal.addEventListener("fragmentshown", function (event) {
     event.fragment.classList.add(event.fragment.dataset.animation);
   }
 });
+
+(function () {
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.getAttribute("href") &&
+      link.hostname !== location.hostname &&
+      (link.target = "_blank");
+  });
+})();

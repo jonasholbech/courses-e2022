@@ -1,12 +1,12 @@
 ---
-const {code, startFrom=1, lineNumbers="", stretch=false, language="js", path=null} = Astro.props;
+const {code, startFrom=1, lineNumbers="", stretch=false, language="js", path=null, dataId=null} = Astro.props;
 const escaped = code.replace(/</g,"&lt;").replace(/>/g,"&gt;");
 /*
    data-noescape 
 */
 ---
 <div>
-<pre class={stretch ? `r-stretch ${language}`:language}><code data-trim data-ln-start-from={startFrom} data-line-numbers={lineNumbers}>
+<pre data-id={dataId} class={stretch ? `r-stretch ${language}`:language}><code data-trim data-ln-start-from={startFrom} data-line-numbers={lineNumbers}>
 {escaped}
 </code></pre>
 {path && <a class="codelink" href=`https://github.com/jonasholbech/courses-s2022/tree/main/public/snippets/${path}`><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
