@@ -1,3 +1,5 @@
+//TODO: den her kunne være svaret på kun at uploade ændringer
+//https://github.com/simonh1000/ftp-deploy/pull/117
 require("dotenv").config();
 var FtpDeploy = require("ftp-deploy");
 var ftpDeploy = new FtpDeploy();

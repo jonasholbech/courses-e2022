@@ -1,14 +1,8 @@
 # TODO
 
-- repo with code snippets for import? works, ineffecient (unless it's incremental in some way)
-- own node server for fetching content?
-  - Then it wont work if the build is remote (netlify) github pages with gh-pages will though
-- figure somethin else out
-- external links in new window
-- base href to control build?
-- FTP deploy
-- Gauge component
+- Gauge component laves (og bruges) der er lavet scafolding)
 - plugins: chalkboard, reveal menu
+- configurations file til paths
 
 # Custom Slide Components
 
@@ -18,14 +12,15 @@ TODO:
 
 ## `<Code ...props>`
 
-| prop          | default | description                              |
+//TODO, re-document
+| prop | default | description |
 | ------------- | ------- | ---------------------------------------- |
-| `code`        | `null`  | The code to syntax highlight             |
-| `startFrom`   | 1       | The first linenumber to show             |
-| `lineNumbers` | `""`    | Highlight specific line, see Reveal docs |
-| `stretch`     | `false` | Stretch code view, for large snippets    |
-| `language`    | `"js"`  | code language, not tested                |
-| `path`        | `null`  | TODO:                                    |
+| `code` | `null` | The code to syntax highlight |
+| `startFrom` | 1 | The first linenumber to show |
+| `lineNumbers` | `""` | Highlight specific line, see Reveal docs |
+| `stretch` | `false` | Stretch code view, for large snippets |
+| `language` | `"js"` | code language, not tested |
+| `path` | `null` | TODO: |
 
 ## `<Explainer ...props>`
 
@@ -101,6 +96,8 @@ Passed to `data` as an object:
 ```
 
 ## `<Timer ...props>`
+
+//TODO: re-document
 
 - time: 300
 - width: 300
