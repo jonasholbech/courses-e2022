@@ -13,7 +13,17 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
     "querySelector.js",
     "querySelectorAll.js",
     "elem.nextElementSibling.js",
-    "elem.parentElement.js"
+    "elem.parentElement.js",
+    "chaining.js",
+    "getAttribute.js",
+    "setAttribute.js",
+    "qsForEach.js",
+    "qsForEachArrow.js",
+    "qsForEachArrowCondensed.js",
+    "useTheCascade.css",
+    "useTheCascade.html",
+    "useTheCascade2.css",
+    "useTheCascade2.html",
 ])
 
 ---
@@ -83,7 +93,7 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
   <section class="small">
     <h4>Chaining</h4>
     <p>We often see these elements used "chained"</p>
-    <pre><code class="js" data-source="6/chaining.js"></code></pre>
+    <Code code={snippets["chaining.js"]} />
   </section>
 
 </section>
@@ -94,15 +104,13 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
   <section>
     <h3><code>setAttribute</code></h3>
     <p>With <code>elem.setAttribute('atr', 'new')</code> we can set the "attributes" on any element in the DOM</p>
-
-    <pre><code class="js" data-source="6/setAttribute.js"></code></pre>
+    <Code code={snippets["setAttribute.js"]} />
   <p><small>we have changed attributes with <code>.src</code> which works just fine</small></p>
   </section>
   <section>
     <h3><code>getAttribute</code></h3>
     <p>We can also "read" attributes</p>
-
-    <pre><code class="js" data-source="6/getAttribute.js"></code></pre>
+    <Code code={snippets["getAttribute.js"]} />
     <p><small>We could also read the src with <code>.src</code> but it behaves strange</small></p>
   </section>
 </section>
@@ -121,20 +129,19 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
     </ul>
   </section>
 
-  <section>
+  <section data-auto-animate>
     <h5><code>forEach</code> with named functions</h5>
-    <pre><code class="js" data-source="6/qsForEach.js"></code></pre>
-
+    <Code dataId="forEach" code={snippets["qsForEach.js"]} />
   </section>
 
-  <section>
+  <section data-auto-animate>
     <h5><code>forEach</code> with arrow functions</h5>
-    <pre><code class="js" data-source="6/qsForEachArrow.js"></code></pre>
+    <Code dataId="forEach" code={snippets["qsForEachArrow.js"]} />
   </section>
 
-  <section>
+  <section data-auto-animate>
     <h5><code>forEach</code> with arrow functions, condensed</h5>
-    <pre><code class="js" data-source="6/qsForEachArrowCondensed.js"></code></pre>
+    <Code dataId="forEach" code={snippets["qsForEachArrowCondensed.js"]} />
   </section>
 
 </section>
@@ -164,18 +171,19 @@ document.querySelector("div").remove()
 </section>
 <section>
   <section>
-    <h1>Conditional data?</h1>
+    <h1 class="small">Conditional data?</h1>
   </section>
   <section>
     <p>What's that?</p>
   </section>
   <section>
-    <p>Non-static sites are full of it.</p>
-    <p>if you're logged in, you see one thing, otherwise you see something else</p>
-    <p>Based on your actions on a site, things can change</p>
-    <p>Some products are sold out, some are discontinued etc</p>
-    <p>&nbsp;</p>
-    <p>Designing for these circumstances require a little thought</p>
+    <ul class="striped">
+        <li>Non-static sites are full of it.</li>
+        <li class="fragment">if you're logged in, you see one thing, otherwise you see something else</li>
+        <li class="fragment">Based on your actions on a site, things can change</li>
+        <li class="fragment">Some products are sold out, some are discontinued etc</li>
+        <li class="fragment">Designing for these circumstances require a little thought</li>
+    </ul>
   </section>
 
   <section>
@@ -201,19 +209,13 @@ document.querySelector("div").remove()
   </section>
   <section>
     <h3>Directly on the element</h3>
-    
-    <pre><code class="html" data-source="6/useTheCascade.html"></code></pre>
-    
-    <pre><code class="css" data-source="6/useTheCascade.css"></code></pre>
-    
+    <Code code={snippets["useTheCascade.html"]} language="html"/>
+    <Code code={snippets["useTheCascade.css"]} language="css"/>
   </section>
   <section>
     <h3>On the parent</h3>
-    
-    <pre><code class="html" data-source="6/useTheCascade2.html"></code></pre>
-    
-    <pre><code class="css" data-source="6/useTheCascade2.css"></code></pre>
-    
+    <Code code={snippets["useTheCascade2.html"]} language="html"/>
+    <Code code={snippets["useTheCascade2.css"]} language="css"/>
   </section>
 </section>
 <section>
@@ -223,11 +225,13 @@ document.querySelector("div").remove()
   <section><img data-src="https://s-media-cache-ak0.pinimg.com/originals/fc/5d/a3/fc5da380710c56cf174b4e5e0c63feb3.jpg" alt=""></section>
   <section>
     <p>Remember <code>if</code>-statements?</p>
-    <div class="col6">
-      <Code code={snippets["if-quiz1.js"]} stretch />
-    </div>
-    <div class="col6">
-      <Code code={snippets["if-quiz2.js"]} stretch />
+    <div class="flex-grid">
+        <div class="col-6">
+        <Code code={snippets["if-quiz1.js"]} stretch />
+        </div>
+        <div class="col-6">
+        <Code code={snippets["if-quiz2.js"]} stretch />
+        </div>
     </div>
     <p>10 minutes, try them out in the console</p>
   </section>
