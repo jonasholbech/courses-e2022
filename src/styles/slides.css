@@ -318,12 +318,7 @@ rect {
     list-style-position: inside;
     column-gap: 3em;
   }
-  #svgTree {
-    transform: translateY(-150px);
-  }
-  .reveal h1.red {
-    color: darkred;
-  }
+  
   .notification {
     transition: all 2s;
     right: -40%;
