@@ -1,0 +1,124 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro"
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+
+import Explainer from "../../../components/Explainer.svelte";
+const snippets = await codeFetcher("t7/11.microinteractions",[
+    
+]);
+
+---
+
+<SlideLayout title="Micro Interactions">
+
+<section>
+    <h1>Micro</h1><h2>interactions</h21>
+    
+</section>
+
+<section>
+    
+    <h3>Today</h3>
+    <ol>
+        <li>Micro-interactions</li>
+        <li>Box model</li>
+        <li>Dev Tools</li>
+        <li>Introduction to the assignment</li>
+        <li>Tomorrow</li>
+    </ol>
+</section>
+
+<section>
+    <section>
+    <h3>What are Micro-Interactions?</h3>
+
+    <blockquote>Micro-Interactions are like any other interactions with devices, which are used to communicate meaningful feedback to the users because a user has to constantly know what happens when an action is performed. It’s a human tendency to expect something to happen when you click a button, scroll a page, add an item to the cart, left swipe a card.</blockquote>
+    </section>    
+    <section>
+    <p>Micro interactions have four parts:</p>
+        <img src="gfx/microinteractions/triggers.png" alt="">
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Triggers</h1>
+    </section>
+    <section>
+    <ul>
+        <li><strong>Triggers</strong> initiate a microinteraction. Triggers can be user-initiated or system initiated.</li> 
+    <li>In a user-initiated trigger, the user has to initiate an action.</li>
+    <li>In a system-initiated trigger, software detects certain qualifications are being met and initiates an action.</li>
+</ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>Rules</h1>
+    </section>
+    <section>
+        <ul>
+        <li><strong>Rules</strong> determine what happens once a microinteraction is triggered.</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>Feedback</h1>
+    </section>
+    <section>
+        <ul>
+        <li><strong>Feedback</strong> lets people know what’s happening. Anything a user sees, hears, or feels while a microinteraction is happening is feedback.</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>Loops and Modes</h1>
+    </section>
+    <section>
+        <ul>
+        <li><strong>Loops and Modes</strong> determine the meta-rules of the microinteraction. What happens to a microinteraction when conditions change?</li>
+        </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>Examples</h1>
+    </section>
+    <section>
+        <p><a href="https://codemyui.com/tag/microinteractions/">https://codemyui.com/tag/microinteractions/</a></p>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Box-Model</h1>
+    </section>
+    <section>
+        <p>Do you know it?</p>
+        <img class="fragment" data-src="gfx/microinteractions/boxmodel.png" alt="">
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>The Dev Tools</h1>
+    </section>
+    <section>
+        <p>Do you know it?</p>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Introduction to the assignment</h2>
+    </section>
+</section>
+<section>
+    <h1>Tomorrow</h1>
+</section>
+
+</SlideLayout>
