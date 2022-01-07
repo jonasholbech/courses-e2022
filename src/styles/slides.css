@@ -139,7 +139,9 @@ rect {
 .reveal .slides .small {
   font-size: 0.7em;
 }
-
+.reveal .slides h1.small {
+  font-size: 3em;
+}
 /*FLEX-GRID*/
 .flex-grid {
   display: flex;

@@ -3,6 +3,7 @@
 - Gauge component laves (og bruges) der er lavet scafolding)
 - plugins: chalkboard, reveal menu
 - configurations file til paths
+- spotlight component? https://codepen.io/xdesro/pen/955b1eecf8c811a36a0f75509a23f90a
 
 # Custom Slide Components
 
