@@ -1,0 +1,13 @@
+---
+const {header} = Astro.props;
+---
+<section>
+    <section>
+        <h1>{header}</h1>
+    </section>
+  
+    <!-- children without a `slot` (or with the `slot="default"`) attribute will go here -->
+    <slot />
+  
+</section>
+
