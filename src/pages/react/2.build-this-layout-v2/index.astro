@@ -14,7 +14,10 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
     "import-export-navigation.js",
     "import-export-app.js",
     "passing-props-functional-manual.js",
-    "passing-props-functional-destructure.js"
+    "passing-props-functional-destructure.js",
+    "rendering-arrays-1.js",
+    "rendering-arrays-2.js",
+    "rendering-arrays-3.js",
 ])
 
 ---
@@ -180,12 +183,12 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
     </section>
     <section>
       <h3>Baby step #1</h3>
-      <pre><code class="js" data-source="2021/rendering-arrays-1.js"></code></pre>
+      <Code code={snippets["rendering-arrays-1.js"]} language="jsx" />
     </section>
     <section>
       <h3>Baby step #2</h3>
       <p>We can ++ it, and use components</p>
-      <pre><code class="js" data-source="2021/rendering-arrays-2.js"></code></pre>
+      <Code code={snippets["rendering-arrays-2.js"]} language="jsx" />
     </section>
     <section>
       <ul>
@@ -197,11 +200,19 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
     <section>
       <h3>Baby step #3</h3>
       <p>We can <code>.map</code> it, and use components</p>
-      <pre><code class="js" data-source="2021/rendering-arrays-3.js"></code></pre>
+      <Code code={snippets["rendering-arrays-3.js"]} language="jsx" />
     </section>
     </AgendaSection>
 
     <AgendaSection header="+3/4">
-    
+        <section>
+            <p>Let's see what you can figure out</p>
+            <p>Take what you built earlier and</p>
+            <ol class="boxed">
+                <li>fix the text's by passing props</li>
+                <li>See any repeated components? create an array of data and map through it to display the components</li>
+            </ol>
+            <p>When to stop is up to you, keep hacking until you get it</p>
+        </section>
     </AgendaSection>
 </SlideLayout>
