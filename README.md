@@ -4,6 +4,9 @@
 - plugins: chalkboard, reveal menu
 - configurations file til paths
 - spotlight component? https://codepen.io/xdesro/pen/955b1eecf8c811a36a0f75509a23f90a
+- deploy script localurl læses i stedetb for at sættes
+- flyt root folder ud af deleteme
+- custom slide compoenets opdatér dokumentation
 
 # Custom Slide Components
 
