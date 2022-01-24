@@ -14,6 +14,8 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
     "stateful-component-2.js",
     "stateful-component-3.js",
     "stateful-component-4.js",
+    "stateful-component-5.js",
+    "react-state-fail.js",
 ])
 
 ---
@@ -220,8 +222,13 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
             <p>In general, only call <code>useState</code> in callbacks (events / useEffect)</p>
         </section>
         <section>
-        <h3><code>useState, #5</code></h3>
-        <Code code={snippets["stateful-component-4.js"]} language="jsx" />
+            <h3><code>useState, #5</code></h3>
+            <Code code={snippets["stateful-component-4.js"]} language="jsx" />
+        </section>
+        <section>
+            <h3><code>useState, #6</code></h3>
+            <Code code={snippets["stateful-component-5.js"]} language="jsx" />
+            <p>Another form exists when the state is not based off a previous state</p>
         </section>
         <section>Let's look at Dev Tools</section>
     <section>
@@ -233,7 +240,10 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
         <p class="fragment">Always use the "updater" function</p>
         </section>
         <section>
-            <p>TODO: example on how react "fails" (setState is asynchronous)</p>
+            <h3>When state fails</h3>
+            <p><code>useState</code> is asynchronous. React schedules the calls and handles them when it has the time</p>
+            <p>The following will work, but not correctly!</p>
+            <Code code={snippets["react-state-fail.js"]} language="jsx" />
         </section>
     </AgendaSection>
 
