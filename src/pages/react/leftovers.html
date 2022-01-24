@@ -1,474 +1,6 @@
-<section>
-    <h3>Agenda</h3>
-    <ul>
-      <li>The Case for the Week</li>
-      <li>Why React?</li>
-      <li>React</li>
-      <li>React</li>
-      <li>React</li>
-    </ul>
-  </section>
+
   
-  <section>
-    <section>
-      <h1>The Case</h1>
-      <h2>A webshop</h2>
-    </section>
-    <section>
-      <h3>The API</h3>
-      <p>
-        <a href="https://kea-alt-del.dk/t7/api/"
-          >https://kea-alt-del.dk/t7/api/</a
-        >
-      </p>
-    </section>
-    <section>
-      <iframe
-        style="background: white; min-height: 400px"
-        width="100%"
-        heigth="100%"
-        data-src="samples/shop.html?v2"
-      ></iframe>
-    </section>
-  </section>
-  <section>
-    <section>
-      <h1>Why React</h1>
-    </section>
-    <section>
-      <h2>How React works</h2>
-      <ol>
-        <li>you display data on a webpage</li>
-        <li>a user interacts with it</li>
-        <li>the data changes</li>
-        <li>React updates the UI</li>
-      </ol>
-    </section>
-    <section>
-      <h2>1. The use of reusable, composable, and stateful components</h2>
-      <blockquote>
-        <p>
-          Working with the DOM API is hard. React basically gives developers the
-          ability to work with a virtual browser that is more friendly than the
-          real browser. React’s virtual browser acts like an agent between the
-          developer and the real browser.
-        </p>
-      </blockquote>
-    </section>
-    <section>
-      <h2>2. The nature of reactive updates</h2>
-      <blockquote>
-        <p>
-          React enables developers to declaratively describe their User Interfaces
-          and model the state of those interfaces. This means instead of coming up
-          with steps to describe transactions on interfaces, developers just
-          describe the interfaces in terms of a final state (like a function).
-          When transactions happen to that state, React takes care of updating the
-          User Interfaces based on that.
-        </p>
-      </blockquote>
-    </section>
-    <section>
-      <h2>3. The virtual representation of views in memory</h2>
-      <blockquote>
-        <p>
-          React is just JavaScript, there is a very small API to learn, just a few
-          functions and how to use them. After that, your JavaScript skills are
-          what make you a better React developer.
-        </p>
-      </blockquote>
-    </section>
-    <section>
-      <blockquote>
-        <p>
-          There are no barriers to entry. A JavaScript developer can become a
-          productive React developer in a few hours.
-        </p>
-      </blockquote>
-      <h3>really?</h3>
-    </section>
-    <section>
-      <h3>React is "easy"</h3>
-      <p>But the tooling around it is HARD</p>
-      <img data-src="gfx/tooling.png" alt="" />
-    </section>
-    <section>
-      <h3><code>create-react-app</code></h3>
-      <p>which is why we use CRA</p>
-      <p>
-        <a href="https://github.com/facebook/create-react-app"
-          >https://github.com/facebook/create-react-app</a
-        >
-      </p>
-    </section>
-    <section>
-      <h2>Warnings</h2>
-      <ul>
-        <li>React does not use the DOM as such</li>
-        <li>It handles all DOM manipulation for us</li>
-        <li>
-          Stuff like <code>querySelector, classList, createElement</code> etc are
-          usually a no-go
-        </li>
-        <li>Even <code>setInterval</code> becomes hard</li>
-        <li>We have to do it the React-way</li>
-      </ul>
-    </section>
-  </section>
   
-  <section>
-    <section>
-      <h1>Tooling</h1>
-    </section>
-    <section>
-      <h4>Part 1, Done once</h4>
-      <ol>
-        <li>
-          Install
-          <a
-            href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
-            >this Chrome extension</a
-          >
-          or
-        </li>
-        <li>
-          Install
-          <a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/"
-            >this Firefox extension</a
-          >
-        </li>
-      </ol>
-    </section>
-    <section>
-      <h4>Part 2, If you've played with React before</h4>
-      <ul>
-        <li>Delete the old version so we always work with the latest</li>
-        <li><code>npm uninstall -g create-react-app</code></li>
-      </ul>
-    </section>
-    <section>
-      <h4>Part 3, Setup a project</h4>
-      <ul>
-        <li>
-          Navigate to where your project should live
-          <ul>
-            <li><code>npx create-react-app .</code></li>
-            <li>or</li>
-            <li><code>npx create-react-app myproject</code></li>
-          </ul>
-        </li>
-        <li class="fragment">But what is NPX?</li>
-        <li class="fragment">
-          <code>npx</code> means "download this package, run it, and forget about
-          it"
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h4>Part 4, run your project</h4>
-      <ul>
-        <li>Open the generated folder in VSCode</li>
-        <li>Run: <code>npm start</code> or <code>yarn start</code></li>
-        <li>(npm install has already run)</li>
-      </ul>
-    </section>
-  </section>
-  <section>
-    <section>
-      <h1>Exercise #1</h1>
-      <p><a href="#/4">Follow the previous steps</a></p>
-    </section>
-  </section>
-  <section>
-    <section>
-      <h1>Functional Components</h1>
-    </section>
-    <section>
-      <h3>JSX</h3>
-      <blockquote>
-        JSX is a preprocessor step that adds XML syntax to JavaScript. You can
-        definitely use React without JSX but JSX makes React a lot more elegant.
-      </blockquote>
-      <p>Basically, it allows us to write HTML in our JS files</p>
-      <p>We can invent our own tags!</p>
-      <p>All tags must be closed</p>
-      <pre><code class="js" data-source="2021/samplejsx.js"></code></pre>
-    </section>
-  
-    <section>
-      <h3>Up and running, functional components</h3>
-      <p>Using JSX we can create re-usable components</p>
-      <pre><code class="js" data-source="2021/functionalComponents.js"></code></pre>
-    </section>
-  
-    <section>
-      <p>
-        The component must return a single element, wrap in a parent element or
-        <code>&lt>...&lt;/></code> if nothing else makes sense
-      </p>
-    </section>
-    <section>
-      <pre><code class="js">//BAD CODE
-  function Test(){
-  return (
-      <p>Hello</p>//no parent node / element
-      <p>Monday</p>
-  )
-  }</code></pre>
-  
-      <pre class="fragment g gg1"><code class="js gs6">//BETTER CODE
-  function Test(){
-  return (
-      <div>
-          <p>Hello</p>
-          <p>Monday</p>
-      </div>
-      )
-  }</code><code class="js fragment gs6">//BEST CODE?
-  function Test(){
-  return (
-      <>
-          <p>Hello</p>
-          <p>Monday</p>
-      &lt;/>
-  )
-  }</code>
-  </pre>
-    </section>
-    <section>
-      <h3>Everything is a component</h3>
-      <p>That's all we do, we write components</p>
-      <p>Small, encapsulated, reusable parts</p>
-      <p>We can also get other peoples components</p>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Exercise #2</h1>
-      <iframe
-        class="gs4"
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=900"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>
-          <div>
-            Clear out <code>App.js</code> so it looks like this
-            <pre><code class="js" data-source="exercises/App.js"></code></pre>
-          </div>
-        </li>
-  
-        <li>
-          If you need CSS, use <code>className</code> instead of
-          <code>class</code>
-        </li>
-  
-        <li>
-          Write the rough HTML needed for the webshop
-          <iframe
-            style="background: white; min-height: 400px"
-            width="100%"
-            heigth="100%"
-            data-src="samples/shop.html?v2"
-          ></iframe>
-        </li>
-      </ol>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Nested Components</h1>
-    </section>
-    <section>
-      <h3>and we can nest components!</h3>
-      <pre><code class="js" data-source="2021/functionalComponentsNested.js"></code></pre>
-      <p class="fragment">
-        Which means that we can now take the first steps into building WebApps /
-        Sites with small, encapsulated modules
-      </p>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Exercise #3</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=900"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>Split your HTML into React components</li>
-      </ol>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Props</h1>
-    </section>
-    <section class="small">
-      <h3>A first look at <code>props</code></h3>
-      <p>Our code is not yet re-usable</p>
-      <p>Our greeting component can only say hi to our moms</p>
-      <p>
-        In React, we can invent our own properties that the component can read
-      </p>
-      <pre><code class="js" data-source="2021/a-first-look-at-props.js"></code></pre>
-      <p class="fragment">See those {} that's how we "interpolate" variables</p>
-    </section>
-    <section>
-      <p><code>props</code> are immutable, you cannot/should not change them</p>
-      <p>We'll get back to this when it makes sense, but...</p>
-      <h3>Whenever a prop change, the component is updated!!</h3>
-    </section>
-    <section>
-      <ul>
-        <li>In the dev tools we can inspect React components as well</li>
-        <li>We can manipulate state and props</li>
-        <li>Let's take a look</li>
-      </ul>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Passing down props</h1>
-      <h2>"prop drilling"</h2>
-    </section>
-    <section>
-      <ul>
-        <li>We've seen props, and we can pass them from parent to child</li>
-        <li>But very often we need to pass our data down several levels</li>
-        <li>If so, just repeat the process</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Example, manual</h3>
-      <pre
-        class="stretch"
-      ><code class="js" data-source="2021/passing-props-functional-manual.js"></code></pre>
-      <p>App => Navigation => Profile</p>
-    </section>
-  
-    <section>
-      <h3>Example, destructuring</h3>
-      <pre
-        class="stretch"
-      ><code class="js" data-source="2021/passing-props-functional-destructure.js"></code></pre>
-      <p>App => Navigation => Profile</p>
-    </section>
-    <section>
-      <ul>
-        <li>If This was all React could do I would already be kind of happy</li>
-        <li>Components are an amazing way of building UI's</li>
-        <li>But we need interactivity</li>
-        <li>And for that we have <code>state</code> and <code>events</code></li>
-      </ul>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Exercise #4</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=1500"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>
-          In the <code>App</code> component create an object called
-          <code>product</code> and give it the following values:
-          <pre><code class="js">{
-      id:1163,
-      productdisplayname:"Round Neck Jersey",
-      price:895,
-      soldOut:0
-  }
-          </code></pre>
-        </li>
-        <li>Pass it down to <code>ProductList</code></li>
-        <li>
-          From <code>ProductList</code> pass it down to <code>Product</code>
-        </li>
-        <li>In <code>Product</code> display a few of the values</li>
-        <li>
-          In the <code>App</code> component, create an array called
-          <code>basket</code>
-        </li>
-        <li>And pass it from <code>App</code> to <code>MyBasket</code></li>
-        <li>
-          In <code>MyBasket</code> show the amount of items in the basket
-          (.length)
-        </li>
-      </ol>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Import / Export</h1>
-      <h2>Splitting / Cleaning up our code</h2>
-    </section>
-    <section>
-      <p>This is probably my favourite part, splitting up our code</p>
-      <ul>
-        <li>We'll put each component in a separate file</li>
-        <li>Increase readability</li>
-        <li>Improve maintainablility</li>
-        <li>Make it easier to work together</li>
-      </ul>
-    </section>
-    <section>
-      <p>The process is simple</p>
-      <ol>
-        <li class="fragment">Put each component in a separate file</li>
-        <li class="fragment">
-          Name the file the same as your component and add <code>.js</code> or
-          <code>.jsx</code>
-        </li>
-        <li class="fragment">
-          Add <code>export default</code> in front of the function definition
-        </li>
-        <li class="fragment">Import it in the "parent" component file</li>
-      </ol>
-    </section>
-    <section>
-      <h3>Example</h3>
-      <pre><code class="js" data-source="2021/import-export-navigation.js"></code></pre>
-      <pre><code class="js" data-source="2021/import-export-app.js"></code></pre>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Exercise #5</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=900"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>
-          Take all your components (except App.js) and put them in separate files
-        </li>
-        <li>Remember to import and export</li>
-        <li>It's easiest if you start from the outer layer and move inwards</li>
-      </ol>
-    </section>
-  </section>
   
   <section>
     <section>
@@ -504,81 +36,7 @@
     </section>
   </section>
   
-  <section>
-    <section>
-      <h1>Exercise #6</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=600"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>
-          Go to <code>Product</code> and use the <code>prop</code>:
-          <code>soldOut</code> to give the product some styling based on whether
-          it's sold out or not
-        </li>
-        <li>
-          Since it's still static, try changing soldOut in <code>App.js</code>
-        </li>
-      </ol>
-    </section>
-  </section>
   
-  <section>
-    <section>
-      <h1>Events</h1>
-    </section>
-    <section>
-      <p>events in React are quite different from what you're used to</p>
-      <p>They actually look a lot like "stuff you've been told not to do"</p>
-      <pre><code class="js" data-source="2021/events.js"></code></pre>
-      <p>
-        <a href="https://reactjs.org/docs/events.html#supported-events"
-          >supported events</a
-        >
-      </p>
-    </section>
-    <section>
-      <h3>Warning</h3>
-      <p>LOTS of examples will do something like</p>
-      <pre><code class="js">&lt;div onClick={...}>Stuff&lt;/div></code></pre>
-      <p>Don't put click events on stuff like that, use buttons and anchors</p>
-      <p class="fragment">And if you have no choice, research aria attributes</p>
-    </section>
-    <section>
-      <h3>Other syntaxes for events</h3>
-      <p>
-        As with <code>addEventListener</code>, events in React receive a callback,
-        and you'll see a lot of different syntaxes
-      </p>
-      <p>So let's take a quick look</p>
-      <pre><code class="js" data-source="2021/events-syntax-by-name.js"></code></pre>
-    </section>
-    <section>
-      <pre><code class="js" data-source="2021/events-syntax-wrapped.js"></code></pre>
-    </section>
-  </section>
-  
-  <section>
-    <section>
-      <h1>Exercise #7</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=360"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>In <code>Product</code>, add a button</li>
-        <li>Add an <code>onClick</code> eventhandler to the button</li>
-        <li>That console.log's the id of the product</li>
-      </ol>
-    </section>
-  </section>
   
   <section>
     <section>
@@ -831,24 +289,6 @@
   </section>
   
   
-  <section>
-    <section>
-      <h1>Exercise #11</h1>
-      <iframe
-        src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=300"
-        width="300"
-        height="400"
-      ></iframe>
-    </section>
-    <section>
-      <ol>
-        <li>
-          In <code>ProductList</code> add a <code>key</code> property to each
-          <code>&lt;Product&nbsp;/></code>
-        </li>
-      </ol>
-    </section>
-  </section>
   
   <section>
     <section>
@@ -1335,4 +775,227 @@
           <li>The minus button</li>
           <li>A million other things</li>
       </ul>
+  </section>
+
+  <section>
+    <h3>Agenda</h3>
+    <ul>
+      <li>Other peoples code</li>
+    </ul>
+  </section>
+  <section>
+    <section>
+      <h1>Using other Peoples code</h1>
+    </section>
+    <section>
+      <p>One of my favorite things in React</p>
+      <blockquote class="fragment"><p>Good Artists Copy; Great Artists Steal<p>
+      <footer>by <cite><a href="https://quoteinvestigator.com/2013/03/06/artists-steal/">disputed</a></cite></footer</blockquote>
+      </blockquote>
+      <blockquote class="fragment"><p>Hell is other people's code</p>
+        <footer>
+        by <cite>Jean-Paul Sartre / Peter Lind</cite>
+        </footer>
+      </blockquote>
+      
+    </section>
+    <section>
+      <p>There are thousands of React components we can install and use</p>
+      <p>Some are easy, some are horrible</p>
+      <blockquote class="twitter-tweet" data-lang="en">
+        <p lang="en" dir="ltr">
+          Remember, a few hours of trial and error can save you several minutes of
+          looking at the README.
+        </p>
+        &mdash; I Am Devloper (@iamdevloper)
+        <a
+          href="https://twitter.com/iamdevloper/status/1060067235316809729?ref_src=twsrc%5Etfw"
+          >November 7, 2018</a
+        >
+      </blockquote>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
+    </section>
+    <section>
+      <h3>What can we get?</h3>
+      <p><a href="https://reactjsexample.com/">A collection of components</a></p>
+      <p>
+        <a href="https://www.npmjs.com/package/react-spinners">React-spinners</a>
+      </p>
+      <p><a href="https://material-ui.com/">Material Design</a></p>
+      <p>
+        <a href="https://www.primefaces.org/primereact/showcase/#/setup"
+          >Another Framework</a
+        >
+      </p>
+    </section>
+  </section>
+  
+  <section>
+    <section>
+      <h1>First Encounter</h1>
+      <p>A loader</p>
+    </section>
+    <section>
+      <p>
+        <a href="https://www.npmjs.com/package/react-loader-spinner"
+          >https://www.npmjs.com/package/react-loader-spinner</a
+        >
+      </p>
+      <p>Let's take a look</p>
+      <ul class="fragment">
+        <li>What demo?</li>
+      </ul>
+      <p>And try it</p>
+    </section>
+  </section>
+  
+  <section>
+    <section>
+      <h1>Exercise #1</h1>
+      <p>Breakout Rooms?</p>
+    </section>
+    <section class="small">
+      <div class="g">
+        <div class="gs8">
+          <p>Exercise: Pick one, make it work</p>
+          <ul>
+            <li>
+              <a href="https://www.npmjs.com/package/react-card-flip"
+                >https://www.npmjs.com/package/react-card-flip</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/brillout/awesome-react-components"
+                >https://github.com/brillout/awesome-react-components</a
+              >
+            </li>
+            <li>
+              <a href="https://reactjsexample.com/">A collection of components</a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/react-loading-skeleton"
+                >react-loading-skeleton</a
+              >
+            </li>
+            <li>
+              <a href="http://www.davidhu.io/react-spinners/">React Spinners</a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/react-id-swiper"
+                >react-id-swiper</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/gorangajic/react-svg-morph/"
+                >React SVG Morph</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/@sandstreamdev/react-swipeable-list"
+                >react-swipable-list</a
+              >
+            </li>
+          </ul>
+          <p>Run create-react-app again to create a new project</p>
+        </div>
+        <iframe
+          class="gs4"
+          src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=1200"
+          width="300"
+          height="400"
+        ></iframe>
+      </div>
+    </section>
+  </section>
+  
+  <section>
+      <section>
+          <h1>UI Frameworks</h1>
+          <p>:-)</p>
+      </section>
+      <section>
+          <p>Besides getting components that fullfill a single need, we can also install entire design systems</p>
+      </section>
+      <section>
+      <h2>I just found one that looks cool, but I have like 0 experience with it</h2>
+      <p>
+        Let's look at what we can get, skim the documentation and see if it's
+        worth it
+      </p>
+    </section>
+    <section>
+      <h3><code>Ant Design</code></h3>
+      <p><a href="https://ant.design/">https://ant.design/</a></p>
+      <p>Let's start by looking at the documentation</p>
+      <p>
+        <a href="https://ant.design/docs/react/use-with-create-react-app"
+          >https://ant.design/docs/react/use-with-create-react-app</a
+        >
+      </p>
+    </section>
+    
+    <section>
+      <h3>My 2 cents</h3>
+      <ul>
+        <li>Don't use grid frameworks</li>
+      </ul>
+    </section>
+  </section>
+  
+  <section>
+    <section>
+      <h1>Exercise #2</h1>
+      <p>Breakout Rooms?</p>
+    </section>
+    <section class="small">
+      <div class="g">
+        <div class="gs8">
+          <ol>
+            <li>Make a new branch or start a new project</li>
+            <li>Install antd</li>
+            <li>Play, try out the components</li>
+            <li>Try switching out your form</li>
+            <li>What can you do with the cards?</li>
+            <li>The preloader?</li>
+          </ol>
+        </div>
+        <iframe
+          class="gs4"
+          src="https://jonasholbech.github.io/stopwatch-react/?transparent=true&time=1800"
+          width="300"
+          height="400"
+        ></iframe>
+      </div>
+    </section>
+  </section>
+  
+  <section>
+    <section>
+      <h2>Other Component / UI Frameworks</h2>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <a href="https://react-bootstrap.github.io/">React Bootstrap</a>
+        </li>
+        <li><a href="https://carbon.sage.com">Carbon</a></li>
+        <li><a href="https://rsuitejs.com/">https://rsuitejs.com/</a></li>
+        <li><a href="https://material-ui.com/">https://material-ui.com/</a></li>
+      </ul>
+    </section>
+  </section>
+  <section>
+    <section>
+      <h3>A little playing</h3>
+      <p>
+        <a href="https://codesandbox.io/s/antd-forked-nsp0e?file=/src/App.js"
+          >https://codesandbox.io/s/antd-forked-nsp0e?file=/src/App.js</a
+        >
+      </p>
+    </section>
   </section>
