@@ -12,6 +12,11 @@ const snippets = await codeFetcher("react/5.pagination",[
     "conditional-rendering-short-circuit.js",
     "conditional-rendering-single-return.js",
     "conditional-rendering-ternary.js",
+    "useEffect-deps1.js",
+    "update-title-without-useEffect.js",
+    "update-title-with-useEffect.js",
+    "useEffect-pagination.js",
+    "useEffect-cleanup.js"
 ])
 
 ---
@@ -211,19 +216,62 @@ const snippets = await codeFetcher("react/5.pagination",[
     </AgendaSection>
 
     <AgendaSection header="<code>useEffect</code> #2">
-    
+        <section>
+            <blockquote>
+                <p>You can tell React to skip applying an effect if certain values haven’t changed between re-renders. To do so, pass an array as an optional second argument to useEffect:</p>
+            </blockquote>
+            <Code code={snippets["useEffect-deps1.js"]} language="jsx" />
+        </section>
+        <section data-auto-animate>
+            <p>But couldn't I just do:</p>
+            <Code dataId="update-title" code={snippets["update-title-without-useEffect.js"]} language="jsx" />
+            <p class="fragment">Yes! But it would do it a lot of times</p>
+            <p class="fragment">Think of it as a convenience method. It get's called for you when specified variables change</p>
+        </section>
+        <section data-auto-animate>
+            <p>This is better:</p>
+            <Code dataId="update-title" code={snippets["update-title-with-useEffect.js"]} language="jsx" />
+        </section>
+        <section>
+            <h3>Simple pagination</h3>
+            <p>This is our API: <a href="https://kea-alt-del.dk/t7/api/products">https://kea-alt-del.dk/t7/api/products</a></p>
+            <p>We can request more products by specifying a <code>start</code> parameter</p>
+            <p><a href="https://kea-alt-del.dk/t7/api/products?start=10">https://kea-alt-del.dk/t7/api/products?start=10</a></p>
+        </section>
+        <section>
+            <p>So, we want to request "the next 10 products" when a criteria is met. <code>useEffect</code> is perfect for that</p>
+        </section>
+        <section>
+            <p>TODO: verify it works</p>
+            <Code code={snippets["useEffect-pagination.js"]} language="jsx" />
+        </section>
     </AgendaSection>
 
-    
-
-    <AgendaSection header="Case: pagination">
-    
+    <AgendaSection header="<code>useEffect</code> #3, cleanup">
+        <section>
+            <p>One more thing before we're <code>useEffect</code> superstars</p>
+            <p>Cleanup</p>
+            <p>Some "effects" needs to be cleaned up. Like removing eventlisteners (specially scroll), intervals etc</p>
+            <p>It's rare that I need this</p>
+        </section>
+        <section>
+            <p>Cleanup is performed for us when the component is "unmounted" (destroyed)</p>
+            <p>We tell React how to clean up by returning a function from <code>useEffect</code></p>
+        </section>
+        <section>
+        <p>TODO: verify it works</p>
+            <Code code={snippets["useEffect-cleanup.js"]} language="jsx" />
+        </section>
     </AgendaSection>
 
     <AgendaSection header="+3/4">
         <section>
             <ul>
-                <li>read https://dmitripavlutin.com/react-useeffect-explanation/</li>
+                <li>read <a href="https://dmitripavlutin.com/react-useeffect-explanation/">https://dmitripavlutin.com/react-useeffect-explanation/</a></li>
+                <li>Use the API from the slides to build a small site</li>
+                <li><a href="https://kea-alt-del.dk/t7/api/#parameters">https://kea-alt-del.dk/t7/api/#parameters</a></li>
+                <li>Use conditional rendering, url parameters, useEffect etc</li>
+                <li>Can you implement a simple shopping basket?</li>
             </ul>
         </section>
     </AgendaSection>
