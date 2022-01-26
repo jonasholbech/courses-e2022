@@ -1,0 +1,48 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro"
+import Goal from "../../../components/Goal.astro"
+import AgendaSection from "../../../components/AgendaSection.astro"
+import Explainer from "../../../components/Explainer.svelte"
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+
+const snippets = await codeFetcher("digital-design/notes",[
+    
+])
+
+---
+
+<SlideLayout title="Notes">
+    <section>Præsentation af mig</section>
+    <section>Hvad er svelte</section>
+    <section>Install
+        <pre><code>
+        npx degit sveltejs/template my-svelte-project
+            cd my-svelte-project
+
+            npm install
+            npm run dev</code></pre>
+    </section>
+    <section>
+        <h4>topics</h4>
+        <ol>
+            <li>Extensions / VSCode setup</li>
+            <li>Components</li>
+            <li>props</li>
+            <li>Slots</li>
+            <li>custom classes</li>
+            <li>scoped styling</li>
+            <li>#if :else</li>
+            <li>each blocks</li>
+            <li>reactivity</li>
+            <li>Deployment</li>
+        </ol>
+    </section>
+
+    <section>
+        <h4>custom classes</h4>
+        <button class="btn" class:variant>lovligt</button>
+        <button class="btn" class:variant class={`{type}`}>ulovligt (flere identiske attr)</button>
+    </section>
+
+</SlideLayout>
