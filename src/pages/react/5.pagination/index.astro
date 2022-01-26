@@ -1,8 +1,9 @@
 ---
-import SlideLayout from "../../../layouts/SlideLayout.astro"
-import Goal from "../../../components/Goal.astro"
-import AgendaSection from "../../../components/AgendaSection.astro"
-import Explainer from "../../../components/Explainer.svelte"
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import Goal from "../../../components/Goal.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import Explainer2 from "../../../components/Explainer.svelte";
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 
@@ -76,8 +77,8 @@ const snippets = await codeFetcher("react/5.pagination",[
             </ol>
             <blockquote>
                 Data fetching, setting up a subscription, and manually changing the DOM in
-                React components are all examples of side effects. Whether or not you’re
-                used to calling these operations “side effects” (or just “effects”), ...
+                React components are all examples of side effects. Whether or not you're
+                used to calling these operations "side effects" (or just "effects"), ...
             </blockquote>
         </section>
         <section>
@@ -125,7 +126,7 @@ const snippets = await codeFetcher("react/5.pagination",[
         <h3>Full example</h3>
         <Code stretch code={snippets["useEffect-syntax-full.js"]} language="jsx" />
         <div class="fragment">
-            <Explainer client:only data={[
+            <Explainer2 client:only data={[
                 {
                     type:"text",
                     x:629,
@@ -218,7 +219,7 @@ const snippets = await codeFetcher("react/5.pagination",[
     <AgendaSection header="<code>useEffect</code> #2">
         <section>
             <blockquote>
-                <p>You can tell React to skip applying an effect if certain values haven’t changed between re-renders. To do so, pass an array as an optional second argument to useEffect:</p>
+                <p>You can tell React to skip applying an effect if certain values haven't changed between re-renders. To do so, pass an array as an optional second argument to useEffect:</p>
             </blockquote>
             <Code code={snippets["useEffect-deps1.js"]} language="jsx" />
         </section>

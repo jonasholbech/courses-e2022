@@ -9,5 +9,8 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Set "renderers" to "[]" to disable all default, builtin component support.
+  buildOptions: {
+    site: "https://kea-alt-del.dk/courses-s2022/", //TODO: env
+  },
   renderers: ["@astrojs/renderer-svelte"],
 });
