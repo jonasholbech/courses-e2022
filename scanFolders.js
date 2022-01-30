@@ -16,8 +16,10 @@ urlsToParse.forEach((url) => {
   const parts = url.split("/");
   const file = parts.at(-1);
   const folder = parts.at(-2);
+  //TODO: check if it overwrites (i think so)
+  //TODO: check if we need to recreate the pdf
   exec(
-    `npm run pdf -- http://localhost:3000/${folder}/${file} ./pdfs/${folder}/${file}.pdf`,
+    `npm run pdf -- http://localhost:3000/courses-s2022/${folder}/${file} ./pdfs/${folder}/${file}.pdf`, //TODO: env
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
