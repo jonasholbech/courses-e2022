@@ -1,15 +1,26 @@
 ---
 import SlideLayout from "../../../layouts/SlideLayout.astro"
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
 ---
 
 <SlideLayout title="Git">
-<section>
-  <h1><code>git</code></h1>
-</section>
+  <section>
+    <h1><code>git</code></h1>
+  </section>
+  <Goal>
+    <ol>
+      <li class="fragment">Understand the need for Git</li>
+      <li class="fragment">Memorize Git specific keywords and flows</li>
+      <li class="fragment">Connect a project to gihub</li>
+      <li class="fragment">Use the commands <code>add, commit, push</code> fluently</li>
+      <li class="fragment">Know that <code>checkout</code>,<code>pull</code> &amp; <code>reset</code> exists</li>
+      <li class="fragment">Know what <code>fork</code>ing and <code>clone</code>ing does, and what the difference is</li>
+    </ol>
+  </Goal>
 <section>
   <h3>Today</h3>
   <ol class="small" style="column-count: 2; column-gap: 6rem">
-    <li>Left-overs from yesterday</li>
     <li>git, what is it</li>
     <li>Prerequisites</li>
     <li>A short interactive tour</li>
@@ -26,18 +37,7 @@ import SlideLayout from "../../../layouts/SlideLayout.astro"
     <li class="stricken">Dictionary</li>
   </ol>
 </section>
-<section>
-  <section>
-    <h1>Left-overs</h1>
-  </section>
-  <section>
-    <ol> 
-      <li>The assignment</li>
-      <li>Introduction to VS Code</li>
-      <li>Anything else?</li>
-    </ol>
-  </section>
-</section>
+
 <section>
   <section><h1>git, what is it</h1></section>
   <section>
@@ -455,5 +455,8 @@ import SlideLayout from "../../../layouts/SlideLayout.astro"
       ></video>
     </p>
   </section>
+</section>
+<section>
+  <h2>Let's review the goals</h2>
 </section>
 </SlideLayout>
