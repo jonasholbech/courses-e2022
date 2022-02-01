@@ -2,6 +2,8 @@
 import SlideLayout from "../../../layouts/SlideLayout.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
 
 const snippets = await codeFetcher("t7/3.template-and-the-dom",[
     "required.js",
@@ -24,6 +26,17 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom",[
     </section>
 </section>
 
+<section>
+    <Goal>
+        <ol>
+            <li>Understand that the DOM is a tree-like object</li>
+            <li>Understand what <code>&lt;template/&gt;</code>'s are</li>
+            <li>Experience how <code>&lt;template/&gt;</code>'s work</li>
+            <li>Know the difference between <code>.innerHTML</code> and <code>.textContent</code></li>
+            <li>Know what concatenation is, and understand how to apply it</li>
+        </ol>
+    </Goal>
+</section>
 
 <section>
     <h3>Today, part 2</h3>
@@ -40,16 +53,11 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom",[
     <h3>Left overs</h3>
     <ol>
         <li>Youtube playlist (live recordings)</li>
-        <li>Friday Bar</li>
-        <li>Information about the top-ups</li>
-        <li>The info channel on teams</li>
+        <li>9/2 backgammon tournament</li>
     </ol>
 </section>
 
-<section>
-    <section>
-        <h2>Understanding the DOM</h2>
-    </section>
+<AgendaSection header="Understanding the DOM">
     <section>
         <h3>Vocabulary</h3>
         <ul>
@@ -117,7 +125,7 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom",[
         </dl>
         <p>It's actually simple, and you've seen it before</p>
     </section>
-</section>
+</AgendaSection>
 
 <section>
     <section>
@@ -212,4 +220,6 @@ const snippets = await codeFetcher("t7/3.template-and-the-dom",[
         <p>Both versions are fine, personally, I prefer the new one</p>
     </section>
 </section>
+<AgendaSection header="Let's review the goals" />
+<AgendaSection header="Your 6+" />
 </SlideLayout>
