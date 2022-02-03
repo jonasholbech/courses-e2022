@@ -19,7 +19,12 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     "arrays-zero-index.js",
     "arrays-foreach.js",
     "arrays-foreach2.js",
-    "array-foreach-template.js"
+    "array-foreach-template.js",
+    "fetch-in-steps-part-1.js",
+    "fetch-in-steps-part-2.js",
+    "fetch-in-steps-part-3.js",
+    "fetch-in-steps-part-4.js",
+    "fetch-in-steps-part-5.js",
 ])
 
 ---
@@ -263,9 +268,29 @@ of a web page, without reloading the whole page.
   <section>
     <h3>I promise you something</h3>
     <p>The hard part comes as the process is asynchronous</p>
-    <p>It can take time be fore we get the response</p>
+    <p>It can take time before we get the response</p>
     <p>It can take time before we get the JSON out</p>
     <p>Which gives us a new syntax to learn</p>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-1.js"]}/>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-2.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-3.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-4.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-5.js"]} stretch/>
   </section>
   <section>
         <h3>Sample</h3>
