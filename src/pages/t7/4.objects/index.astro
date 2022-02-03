@@ -3,6 +3,9 @@ import SlideLayout from "../../../layouts/SlideLayout.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 import Pacman from "./components/Pacman.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
+
 const snippets = await codeFetcher("t7/4.objects",[
     "objects1.js",
     "objects2.js",
@@ -18,6 +21,16 @@ const snippets = await codeFetcher("t7/4.objects",[
 <section>
   <h1>Objects</h1>
   <h3>jofh@kea.dk</h3>
+</section>
+<section>
+  <Goal>
+    <ol>
+      <li>Know how object (literals) are created in JS</li>
+      <li>Know how to access properties in simple objects</li>
+      <li>See how arrays work</li>
+      <li>Combine &lt;template&gt; and objects</li>
+    </ol>
+  </Goal>
 </section>
 <section>
   <h2>Agenda</h2>
@@ -134,14 +147,6 @@ const snippets = await codeFetcher("t7/4.objects",[
 </section>
 
 <section>
-  <h2>Your +5</h2>
-  <ol>
-    <li class="fragment">Task: "3. CSS Diner"</li>
-    <li class="fragment">Task: "4. Read tomorrows slides"</li>
-    <li class="fragment">Article: Labels are a last resort</li>
-    <li class="fragment">Article: Steve Schoeger Tweets</li>
-    <li class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</li>
-  </ol>
-  
+  <h1>Let's review the goals</h1>
 </section>
 </SlideLayout>

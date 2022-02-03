@@ -3,6 +3,8 @@ import SlideLayout from "../../../layouts/SlideLayout.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
 const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     "full-fetch.js",
     "fetch-described.js",
@@ -29,6 +31,18 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     <h3>jofh@kea.dk</h3>
 </section>
 
+<section>
+  <Goal>
+    <ol>
+      <li>A basic Understanding of what an API is</li>
+      <li>A basic Understanding of what JSON is</li>
+      <li>Understand the need for <code>fetch</code></li>
+      <li>and knowing what to change in the fetch-code</li>
+      <li>Know what arrays are</li>
+      <li>Experience playing with arrays</li>
+    </ol>
+  </Goal>
+</section>
 <section>
   <h2>Agenda</h2>
   <ul>
@@ -423,6 +437,18 @@ of a web page, without reloading the whole page.
       <li>Since it's now YOUR repository, we can turn on GitHub Pages</li>
       <li><a href="https://youtu.be/DSfIkMgDUo0">Follow the instructions in this link</a></li>
     </ul>
+  </section>
+</section>
+<section>
+  <section>2+</section>
+  <section>
+    <h2>Your +2</h2>
+  <ol>
+    <li class="fragment">Article: Labels are a last resort</li>
+    <li class="fragment">Article: Steve Schoeger Tweets</li>
+    <li class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</li>
+    <li class="fragment">Task: Exploring templates</li>
+  </ol>
   </section>
 </section>
 </SlideLayout>

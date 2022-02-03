@@ -19,7 +19,7 @@ urlsToParse.forEach((url) => {
   //TODO: check if it overwrites (i think so)
   //TODO: check if we need to recreate the pdf
   exec(
-    `npm run pdf -- http://localhost:3000/courses-s2022/${folder}/${file} ./pdfs/${folder}/${file}.pdf`, //TODO: env
+    `npm run pdf -- http://localhost:3000/${folder}/${file} ./pdfs/${folder}/${file}.pdf`, //TODO: env
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);

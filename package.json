@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "predeploy": "npm run build",
     "deploy": "node deploy.js",
+    "build-and-deploy": "npm run build && node deploy.js",
     "postdeploy": "npm-run-all -p --race dev createPDFs",
     "createPDFs": "sleep 5 && node scanFolders.js",
     "pdf": "decktape reveal --size=1280x1280 "
