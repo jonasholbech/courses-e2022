@@ -24,6 +24,8 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     "fetch-in-steps-part-3.js",
     "fetch-in-steps-part-4.js",
     "fetch-in-steps-part-5.js",
+    "fetch-in-steps-part-6.js",
+    "fetch-in-steps-part-7.js",
 ])
 
 ---
@@ -311,24 +313,29 @@ of a web page, without reloading the whole page.
     <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-5.js"]} stretch/>
     <p>And just to confuse everyone, we do not need the name for the function</p>
   </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-6.js"]} stretch/>
+    <p>And why not turn it into an arrow function?</p>
+  </section>
+  <section data-auto-animate>
+    <h3>The syntax</h3>
+    <Code dataId="fetch-in-steps"code={snippets["fetch-in-steps-part-7.js"]} stretch/>
+    <p>And why not use an implicit return?</p>
+    <p class="fragment">Don't worry, this is just crazy for now</p>
+  </section>
   
-    <section>
-        <h3>fetch - ES6</h3>
-        <Code code={snippets["fetches6.js"]}/>
-    </section>
 </AgendaSection>
 
-<section>
-  <section>
-    <h1>Making our site dynamic</h1>
-  </section>
+<AgendaSection header="Making our site dynamic">
   <section>
     <p><strong>This is our API</strong></p>
     <p><a href="https://kea-alt-del.dk/t7/api/">https://kea-alt-del.dk/t7/api/</a></p>
     <p><strong>This is my repo</strong></p>
     <p><a href="https://github.com/jonasholbech/static-site-v2">https://github.com/jonasholbech/static-site-v2</a></p>
   </section>
-</section>
+</AgendaSection>
+
 <section>
   <section>
     <h1>Exercise</h1>
@@ -376,57 +383,51 @@ of a web page, without reloading the whole page.
 </section>
 
 
-<section>
-  <section>
-    <h1>Arrays, Objects &amp; the <code>&lt;template&gt;</code></h1>
-  </section>
-  <section>
-    <p>We have all the pieces</p>
-    <ol>
-      <li>Create a template</li>
-      <li>Loop through the data</li>
-      <li><code>forEach</code> item in the data:
-        <ol>
-          <li>Grab the template</li>
-          <li>clone the template</li>
-          <li>change some content</li>
-          <li>grap the parent</li>
-          <li>append the clone</li>
-        </ol>
-      </li>
-    </ol>
-  </section>
-  <section>
-    <Code code={snippets["array-foreach-template.js"]} stretch />
-  </section>
-</section>
+  <AgendaSection header="Arrays, Objects &amp; the <code>template</code>">
+    <section>
+      <p>We have all the pieces</p>
+      <ol>
+        <li>Create a template</li>
+        <li>Loop through the data</li>
+        <li><code>forEach</code> item in the data:
+          <ol>
+            <li>Grab the template</li>
+            <li>clone the template</li>
+            <li>change some content</li>
+            <li>grap the parent</li>
+            <li>append the clone</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <Code code={snippets["array-foreach-template.js"]} stretch />
+    </section>
+  </AgendaSection>
 
-<section>
-  <section>
-    <h1>Exercise</h1>
-    <p>Fronter: "4. Superhero list, #2"</p> 
-  </section>
-  <section>
-    <h2>Bonus exercise</h2>
-    <p>Aren't you lucky</p>
-    <ul>
-      <li>If you forked before you cloned you can now <var>add =&gt; commit =&gt; push</var> directly</li>
-      <li>DO IT</li>
-      <li>Since it's now YOUR repository, we can turn on GitHub Pages</li>
-      <li><a href="https://youtu.be/DSfIkMgDUo0">Follow the instructions in this link</a></li>
-    </ul>
-  </section>
-</section>
-<section>
-  <section>2+</section>
-  <section>
-    <h2>Your +2</h2>
-  <ol>
-    <li class="fragment">Article: Labels are a last resort</li>
-    <li class="fragment">Article: Steve Schoeger Tweets</li>
-    <li class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</li>
-    <li class="fragment">Task: Exploring templates</li>
-  </ol>
-  </section>
-</section>
+  <AgendaSection header="Exercise" p={'Fronter: "4. Superhero list, #2"'}>
+    <section>
+      <h2>Bonus exercise</h2>
+      <p>Aren't you lucky</p>
+      <ul>
+        <li>If you forked before you cloned you can now <var>add =&gt; commit =&gt; push</var> directly</li>
+        <li>DO IT</li>
+        <li>Since it's now YOUR repository, we can turn on GitHub Pages</li>
+        <li><a href="https://youtu.be/DSfIkMgDUo0">Follow the instructions in this link</a></li>
+      </ul>
+    </section>
+  </AgendaSection>
+  <AgendaSection header="Let's review the goals" />
+  <AgendaSection header="+2">
+    
+    <section>
+      <h2>Your +2</h2>
+    <ol>
+      <li class="fragment">Article: Labels are a last resort</li>
+      <li class="fragment">Article: Steve Schoeger Tweets</li>
+      <li class="fragment">Video: "The Google History of a High-Paid Sr. Engineer</li>
+      <li class="fragment">Task: Exploring templates</li>
+    </ol>
+    </section>
+  </AgendaSection>
 </SlideLayout>

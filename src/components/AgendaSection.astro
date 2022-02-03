@@ -1,13 +1,12 @@
 ---
-const {header} = Astro.props;
+const {header,p} = Astro.props;
+let paragraph = p ? `<p>${p}</p>` : null
 ---
 <section>
     <section>
         <h1>{header}</h1>
+        {paragraph}
     </section>
-  
-    <!-- children without a `slot` (or with the `slot="default"`) attribute will go here -->
     <slot />
-  
 </section>
 
