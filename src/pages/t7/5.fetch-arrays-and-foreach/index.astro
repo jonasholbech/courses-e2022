@@ -7,7 +7,6 @@ import AgendaSection from "../../../components/AgendaSection.astro";
 import Goal from "../../../components/Goal.astro";
 const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
     "full-fetch.js",
-    "fetch-described.js",
     "fetches6.js",
     "callbacks-simple.js",
     "callbacks-simple-2.js",
@@ -111,10 +110,7 @@ const snippets = await codeFetcher("t7/5.fetch-arrays-and-foreach",[
         <p><a href="https://github.com/jonasholbech/t7-gsap-api-example">Let's look at what we cloned the other day</a></p>
     </section>
 </section>
-<section>
-    <section>
-        <h1><code>JSON</code></h1>
-    </section>
+<AgendaSection header="JSON">
     <section>
         <ul>
             <li>JSON is a syntax for storing and exchanging data.</li>
@@ -165,11 +161,8 @@ In JavaScript, keys can be strings, numbers, or identifier names:<br>
         </li>
     </ul>
     </section>
-</section>
-<section>
-  <section>
-    <h1>Exercise: Superhero info</h1>
-  </section>
+</AgendaSection>
+<AgendaSection header="Exercise: Superhero info">
   <section>
     <h2>Two parts</h2>
     <ol>
@@ -190,16 +183,12 @@ In JavaScript, keys can be strings, numbers, or identifier names:<br>
     </ol>
     <p>Horribly wrong files will not be used</p>
   </section>
-</section>
-
-<section>
-  
-    <h1><code>fetch</code></h1>
-    <h3>jofh@kea.dk</h3>
-</section>
+</AgendaSection>
 
 
-<section>
+
+
+<AgendaSection header="<code>fetch</code>">
   <section><h1>One slide to rule them all</h1>
     <p class="fragment">Ready?</p>
   </section>
@@ -209,7 +198,7 @@ In JavaScript, keys can be strings, numbers, or identifier names:<br>
     
     <p>We probably won't get there</p>
   </section>
-</section>
+</AgendaSection>
 
 <section>
   <section>
@@ -246,10 +235,34 @@ of a web page, without reloading the whole page.
     </ol>
   </section>
 </section>
-<section>
+
+<AgendaSection header="(Too) many ways to use a callback">
   <section>
-    <h1>AJAX in action - <code>fetch</code></h1>
+    <p>What is a callback?</p>
   </section>
+  <section data-auto-animate>
+    <p>Let's start simple</p>
+    <Code dataId="fetch" code={snippets["callbacks-simple.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <p>We can do it without creating a variable for the button</p>
+    <Code dataId="fetch" code={snippets["callbacks-simple-2.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <p>We can define the function directly in the callback</p>
+    <Code dataId="fetch" code={snippets["callbacks-simple-3.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <p>When used like that, we don't need the name</p>
+    <Code dataId="fetch" code={snippets["callbacks-simple-4.js"]} stretch/>
+  </section>
+  <section data-auto-animate>
+    <p>And since "ES6" we can use arrow functions</p>
+    <Code dataId="fetch" code={snippets["callbacks-simple-5.js"]} stretch/>
+  </section>
+</AgendaSection>
+
+<AgendaSection header="AJAX in action - <code>fetch</code>">
   <section>
     <h3><code>fetch</code></h3>
     <p><code>fetch</code> is one of the ways we can work with AJAX in JS</p>
@@ -286,90 +299,25 @@ of a web page, without reloading the whole page.
     <h3>The syntax</h3>
     <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-3.js"]} stretch/>
     <p>and THEN we get the data</p>
+    <p>Now our code actually works, but...</p>
   </section>
   <section data-auto-animate>
     <h3>The syntax</h3>
     <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-4.js"]} stretch/>
-    <p>Since we won't need <code>headersReceived</code> any where else, we move it up</p>
+    <p>Since we won't need <code>headersReceived</code> anywhere else, we CAN move it up</p>
   </section>
   <section data-auto-animate>
     <h3>The syntax</h3>
     <Code dataId="fetch-in-steps" code={snippets["fetch-in-steps-part-5.js"]} stretch/>
     <p>And just to confuse everyone, we do not need the name for the function</p>
   </section>
-  <section>
-        <h3>Sample</h3>
-        <Code code={snippets["fetch-described.js"]} stretch/>
-        <div class="fragment">
-        <Explainer client:only data={[
-    {
-        type:"text",
-        x:50,
-        y:40,
-        text:"Which file do we load?"
-    },
-    {
-        type:"arrow",
-        d:"M170,50 L180,80"
-    },
-    {
-        type:"text",
-        x:650,
-        y:150,
-        text:"What kind of data do we need?"
-    },
-    {
-        type:"arrow",
-        d:"M650,145 L550,175"
-    },
-    {
-        type:"text",
-        x:550,
-        y:250,
-        text:"What to do once we get it"
-    },
-    {
-        type:"arrow",
-        d:"M550,245 L360,260"
-    },
-    {
-        type:"arrow",
-        d:"M550,245 L400,330"
-    }
-
-  ]} /></div>
-    </section>
+  
     <section>
         <h3>fetch - ES6</h3>
         <Code code={snippets["fetches6.js"]}/>
     </section>
-</section>
-<section>
-  <section>
-    <h1>(Too) many ways to use a callback</h1>
-    <p>What is a callback?</p>
-  </section>
-  <section data-auto-animate>
-    <p>Let's start simple</p>
-    <Code dataId="fetch" code={snippets["callbacks-simple.js"]} stretch/>
-  </section>
-  <section data-auto-animate>
-    <p>We can do it without creating a variable for the button</p>
-    <Code dataId="fetch" code={snippets["callbacks-simple-2.js"]} stretch/>
-  </section>
-  <section data-auto-animate>
-    <p>We can define the function directly in the callback</p>
-    <Code dataId="fetch" code={snippets["callbacks-simple-3.js"]} stretch/>
-  </section>
-  <section data-auto-animate>
-    <p>When used like that, we don't need the name</p>
-    <Code dataId="fetch" code={snippets["callbacks-simple-4.js"]} stretch/>
-  </section>
-  <section data-auto-animate>
-    <p>And since "ES6" we can use arrow functions</p>
-    <Code dataId="fetch" code={snippets["callbacks-simple-5.js"]} stretch/>
-  </section>
-</section>
+</AgendaSection>
+
 <section>
   <section>
     <h1>Making our site dynamic</h1>
