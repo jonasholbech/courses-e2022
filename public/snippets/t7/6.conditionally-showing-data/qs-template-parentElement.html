@@ -14,8 +14,7 @@
   <p>content goes here</p>
 </article>
 <script>
-  const header = document.querySelector("header");
-  /* with header selected we can
-  search for stuff inside it */
-  const link = header.querySelector("a");
+  const header = document.querySelector("article header");
+
+  const article = header.parentElement;
 </script>

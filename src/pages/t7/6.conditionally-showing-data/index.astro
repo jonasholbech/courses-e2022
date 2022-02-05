@@ -3,6 +3,8 @@ import SlideLayout from "../../../layouts/SlideLayout.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 import Explainer from "../../../components/Explainer.svelte";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
 const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
     "if-quiz1.js",
     "if-quiz2.js",
@@ -10,10 +12,9 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
     "discount2.js",
     "navigationhelpers.js",
     "qs-template.html",
-    "querySelector.js",
-    "querySelectorAll.js",
-    "elem.nextElementSibling.js",
-    "elem.parentElement.js",
+    "qs-template-all.html",
+    "qs-template-parentElement.html",
+    "qs-template-nextElementSibling.html",
     "chaining.js",
     "getAttribute.js",
     "setAttribute.js",
@@ -29,14 +30,22 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
 ---
 
 <SlideLayout title="Conditionally showing data">
-<section>
-  <h2>Dom manipulation</h2>
-  <h3>Conditionally showing data</h3>
-</section>
+<AgendaSection header="Dom manipulation" p="Conditionally showing data" />
 
+<section>
+  <Goal>
+    <ol>
+      <li>Learn to navigate the DOM</li>
+      <li>Work with attributes</li>
+      <li>Practice arrays</li>
+      <li>Get a better understanding of conditions</li>
+    </ol>
+  </Goal>
+</section>
 <section>
   <h2>Agenda</h2>
   <ul>
+    <li>Left-overs</li>
     <li>Navigating the DOM</li>
     <li>Attributes</li>
     <li>Arrays / <code>.querySelectorAll</code></li>
@@ -46,6 +55,15 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
     <li><code>productlist.html</code>, #1</li>
   </ul>
 </section>
+
+<AgendaSection header="Left-overs">
+  <section>
+    <ol>
+      <li>New video (superheroes)</li>
+      <li>Questions?</li>
+    </ol>
+  </section>
+</AgendaSection>
 
 <section>
   <h3>Purpose of today</h3>
@@ -67,27 +85,24 @@ const snippets = await codeFetcher("t7/6.conditionally-showing-data",[
   <section class="small">
     <h4><code>elem.querySelector</code></h4>
     <p>With something selected, we can search through it's children</p>
-    <Code code={snippets["qs-template.html"]} />
-    <Code code={snippets["querySelector.js"]} />
+    <Code code={snippets["qs-template.html"]} lineNumbers="1-21|2,8,17|4-5,18-20"/>
   </section>
 
   <section class="small">
     <h4><code>elem.querySelectorAll</code></h4>
-    <Code code={snippets["qs-template.html"]} />
-    <Code code={snippets["querySelectorAll.js"]} />
+    <Code code={snippets["qs-template-all.html"]} lineNumbers="1-24|20,4-5,14|22,7,17 " stretch/>
+    
     <p>This one is a bit harder, we'll get back to it</p>
   </section>
 
   <section class="small">
     <h4><code>elem.parentElement</code></h4>
-    <Code code={snippets["qs-template.html"]} />
-    <Code code={snippets["elem.parentElement.js"]} />
+    <Code code={snippets["qs-template-parentElement.html"]} lineNumbers="1-100|10,13,17|9,15,19"/>
   </section>
 
   <section class="small">
     <h4><code>elem.nextElementSibling</code></h4>
-    <Code code={snippets["qs-template.html"]} />
-    <Code code={snippets["elem.nextElementSibling.js"]} />
+    <Code code={snippets["qs-template-nextElementSibling.html"]} stretch lineNumbers="1-100|20-21|20-21,2,8|23-24|23-24,9,18|26|26,7|28|28,3,6" />
   </section>
 
   <section class="small">
@@ -251,11 +266,13 @@ document.querySelector("div").remove()
   </section>
   <section>
     <ol>
-      <li>Follow the process in the <a href="https://www.youtube.com/watch?v=eNY6FfgpfgY&list=PLCx1FpZ4Dtb0Qapq6tHOGiAxPeAUGwwk8&index=6">video</a></li>
+      <li>Follow the process in the <a href="https://www.youtube.com/watch?v=eNY6FfgpfgY&list=PLCx1FpZ4Dtb1c2pBTQWTcliHbsJBaZAMt&index=5&t=15s">video</a></li>
       <li>This one will be a little harder than the last time, because our DOM's will be very different</li>
       <li>But remember, you can <code>.remove()</code> things in your clone</li>
       <li>And use all the other cool methods for navigating the DOM inside your clones</li>
     </ol>
   </section>
 </section>
+<AgendaSection header="Let's review the goals" />
+<AgendaSection header="+5" />
 </SlideLayout>

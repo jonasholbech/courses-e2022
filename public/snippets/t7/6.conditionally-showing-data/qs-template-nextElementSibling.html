@@ -9,13 +9,21 @@
 <article>
   <header>
     <h1>An ode to JS</h1>
-    <h2>By <a href="#">Jonas</a></h2>
+    <h2>
+      By
+      <a href="#">Jonas</a>
+    </h2>
   </header>
   <p>content goes here</p>
 </article>
 <script>
   const header = document.querySelector("header");
-  /* with header selected we can
-  search for stuff inside it */
-  const link = header.querySelector("a");
+  //what does 'header' contain now?
+
+  const next = header.nextElementSibling;
+  //what's inside 'next' now?
+
+  const please = document.querySelector("header p");
+
+  const x = please.previousElementSibling;
 </script>
