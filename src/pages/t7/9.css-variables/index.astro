@@ -75,7 +75,7 @@ const snippets = await codeFetcher("t7/9.css-variables",[
     <p>But the syntax is strange</p>
   </section>
   <section>
-    <Code code={snippets["custom-properties.css"]} language="css" />
+    <Code code={snippets["custom-properties.css"]} language="css" stretch />
 
   </section>
   <section>
@@ -262,7 +262,7 @@ h1 {
     <section>
         <h2>DO:</h2>
         <ol>
-            <li class="fragment">... mobile first</li>
+            <li class="fragment">... mobile first (right?)</li>
             <li class="fragment">... custom properties for common values</li>
             <li class="fragment">... multiple grids /flexes</li>
             <li class="fragment">...not be afraid of media queries
@@ -279,11 +279,11 @@ h1 {
     <section>
         <h2>DON'T(s)</h2>
         <ul>
-            <li class="fragment">Responsive is not an afterthought (mobile first)</li>
+            <li class="fragment">Responsive is not an afterthought (check often)</li>
             <li class="fragment">(almost) Never set heights</li>
             <li class="fragment">Use min-height if you need to</li>
             <li class="fragment">Minimzie width's as well</li>
-            <li class="fragment">(and use min-width instead)</li>
+            <li class="fragment">(and use min-width / max-width instead)</li>
             <li class="fragment">Can you do without <code>px</code>?</li>
             <li class="fragment">Use margins sparringly, gap is better</li>
             <li class="fragment">Use magic values</li>

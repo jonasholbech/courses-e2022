@@ -1,6 +1,6 @@
 {
   "name": "@example/starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "OLDpredev": "rm -rf dist",
@@ -12,9 +12,8 @@
     "preview": "astro preview",
     "predeploy": "npm run build",
     "deploy": "node deploy.js",
-    "build-and-deploy": "npm run build && node deploy.js",
-    "postdeploy": "npm-run-all -p --race dev createPDFs",
-    "createPDFs": "sleep 5 && node scanFolders.js",
+    "createPDFs": "npm-run-all -p --race dev startServerScanFolders",
+    "startServerScanFolders": "sleep 5 && node scanFolders.js",
     "pdf": "decktape reveal --size=1280x1280 "
   },
   "devDependencies": {
