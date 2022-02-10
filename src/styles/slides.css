@@ -117,6 +117,7 @@ rect {
   background-color: var(--background-reversed);
   color: var(--color-reversed);
 }
+
 .reveal .boxed {
   border: 1px solid var(--r-main-color);
 }

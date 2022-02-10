@@ -1,12 +1,7 @@
 ---
 import SlideLayout from "../../../layouts/SlideLayout.astro"
-import codeFetcher from "../../../js/codeFetcher";
-import Code from "../../../components/Code.astro";
-
-import Explainer from "../../../components/Explainer.svelte";
-const snippets = await codeFetcher("t7/10.user-stories",[
-    
-]);
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Goal from "../../../components/Goal.astro";
 
 ---
 
@@ -18,7 +13,17 @@ const snippets = await codeFetcher("t7/10.user-stories",[
   <cite>TopDanmark</cite>
 </section>
 <section>
-    <h2>Agenda</h2>
+    <Goal>
+        <ol>
+            <li>Understand what user stories are and how they can be helpful</li>
+            <li>Understand how data can be modelled and how datatypes are used in modelling</li>
+            <li>Practice working with Git, in a group</li>
+            <li>Get that nice feeling you get when evaluating the two weeks</li>
+        </ol>
+    </Goal>
+</section>
+<section>
+    <h2>Agenda</h2> 
     <ul>
         <li>User stories</li>
         <li>Introduction to data modelling</li>
