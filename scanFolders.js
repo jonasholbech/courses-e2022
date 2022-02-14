@@ -17,8 +17,9 @@ urlsToParse.forEach((url) => {
   const file = parts.at(-1);
   const folder = parts.at(-2);
   //TODO: check if it overwrites (i think so)
-  //TODO: check if we need to recreate the pdf
+  //check if we need to recreate the pdf
   if (!existsSync(`./pdfs/${folder}/${file}.pdf`)) {
+    console.log(`creating ./pdfs/${folder}/${file}.pdf`);
     createPDF(folder, file);
   } else {
     const pdfStats = statSync(`./pdfs/${folder}/${file}.pdf`);
@@ -28,7 +29,7 @@ urlsToParse.forEach((url) => {
         `skipping ./pdfs/${folder}/${file}.pdf, it exists and pdf is newer`
       );
     } else {
-      console.log(`./pdfs/${folder}/${file}.pdf`);
+      console.log(`overwriting ./pdfs/${folder}/${file}.pdf`);
       createPDF(folder, file);
     }
   }
