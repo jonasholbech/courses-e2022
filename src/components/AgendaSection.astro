@@ -1,10 +1,15 @@
 ---
-const {header,p} = Astro.props;
+const {header,p,h2,h3} = Astro.props;
+let header1 = header ? `<h1>${header}</h1>` : null
 let paragraph = p ? `<p>${p}</p>` : null
+let header2 = h2 ? `<h2>${h2}</h2>` : null
+let header3 = h3 ? `<h3>${h3}</h3>` : null
 ---
 <section>
     <section>
-        <h1>{header}</h1>
+        {header1}
+        {header2}
+        {header3}
         {paragraph}
     </section>
     <slot />
