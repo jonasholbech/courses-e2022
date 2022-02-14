@@ -450,96 +450,80 @@ h1.textContent = isitfriday() ? "hell yeah": ":-(";
         </section>
     </AgendaSection>
 
-<section>
-    <h2>Live example</h2>
-    <p><a href="https://is.js.org/">https://is.js.org/</a></p>
-</section>
-<section>
-    <h2>Live example</h2>
-    <p>(I have not tried any of these)</p>
-    <ul>
-        <li><a href="https://nosir.github.io/cleave.js/">https://nosir.github.io/cleave.js/</a></li>
-        <li><a href="https://www.npmjs.com/package/color-convert">https://www.npmjs.com/package/color-convert</a></li>
-        <li><a href="https://www.npmjs.com/package/fireworks-js">https://www.npmjs.com/package/fireworks-js</a></li>
-    </ul>
+    <AgendaSection h2="Live example, #1" p="<a href='https://is.js.org/'>https://is.js.org/</a>" />
     
-</section>
-<section class="small">
-    <h3>Cool packages</h3>
-    <ol>
-        <li><a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a></li>
-        <li><a href="https://github.com/juliangarnier/anime">anime.js</a></li>
-        <li><a href="https://greensock.com/docs/NPMUsage">GSAP (a bit harder to use)</a></li>
-        <li><a href="https://is.js.org/">is.js</a></li>
-        <li><a href="https://date-fns.org/">date-fns</a></li>
-        <li><a href="https://www.chartjs.org/">chart.js (a bit harder to use)</a></li>
-        <li><a href="https://robinparisi.github.io/tingle/">tingle.js</a></li>
-        <li><a href="https://christinecha.github.io/choreographer-js/">https://christinecha.github.io/choreographer-js/</a></li>
-        <li><a href="https://multiple.js.org/">https://multiple.js.org/</a></li>
-        <li><a href="https://popper.js.org/">https://popper.js.org/</a></li>
-        <li><a href="https://robinparisi.github.io/tingle/">https://robinparisi.github.io/tingle/</a></li>
-        <li><a href="https://www.npmjs.com/package/pristinejs">https://www.npmjs.com/package/pristinejs</a></li>
-    </ol>
-</section>
-
-<section>
     <section>
-        <h1>Exercise</h1>
-        <p>Go solve "The module tutorial" assignment</p>
-    </section>
-</section>
-<section>
-    <section>
-        <h3>A work in progress</h3>
-        <p>Setup a new project, quickly</p>
-        <Code code={snippets["setup-script.sh"]} language="bash"/>
+        <h2>Live example ,#2</h2>
+        <p>(I have not tried any of these)</p>
+        <ul>
+            <li><a href="https://nosir.github.io/cleave.js/">https://nosir.github.io/cleave.js/</a></li>
+            <li><a href="https://www.npmjs.com/package/color-convert">https://www.npmjs.com/package/color-convert</a></li>
+            <li><a href="https://www.npmjs.com/package/fireworks-js">https://www.npmjs.com/package/fireworks-js</a></li>
+        </ul>
         
     </section>
-</section>
+    <section class="small">
+        <h3>Cool packages</h3>
+        <ol>
+            <li><a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a></li>
+            <li><a href="https://github.com/juliangarnier/anime">anime.js</a></li>
+            <li><a href="https://greensock.com/docs/NPMUsage">GSAP (a bit harder to use)</a></li>
+            <li><a href="https://is.js.org/">is.js</a></li>
+            <li><a href="https://date-fns.org/">date-fns</a></li>
+            <li><a href="https://www.chartjs.org/">chart.js (a bit harder to use)</a></li>
+            <li><a href="https://robinparisi.github.io/tingle/">tingle.js</a></li>
+            <li><a href="https://christinecha.github.io/choreographer-js/">https://christinecha.github.io/choreographer-js/</a></li>
+            <li><a href="https://multiple.js.org/">https://multiple.js.org/</a></li>
+            <li><a href="https://popper.js.org/">https://popper.js.org/</a></li>
+            <li><a href="https://robinparisi.github.io/tingle/">https://robinparisi.github.io/tingle/</a></li>
+            <li><a href="https://www.npmjs.com/package/pristinejs">https://www.npmjs.com/package/pristinejs</a></li>
+        </ol>
+    </section>
 
-<section>
-    <h1>Problems!!!</h1>
-</section>
-<section>
+    <AgendaSection header="Exercise" p="Go solve 'The module tutorial' assignment" />
+        
     <section>
-        <h1>Must be hosted at /</h1>
-        <h2>Problem 1</h2>
+        <section>
+            <h3>A work in progress</h3>
+            <p>Setup a new project, quickly</p>
+            <Code code={snippets["setup-script.sh"]} language="bash"/>
+        </section>
     </section>
+
     <section>
-        <h3>Building for sub-folders</h3>
-        <p>Vite (and all similar tools) will assume you host your files at /</p>
-        <p>e.g. <code>https://project.domain.com</code></p>
-        <p>e.g. <code>https://domain.com</code></p>
-        <p>We can change that by passing a <code>base</code> to the build command in package.json:</p>
-        <pre><code class="bash">"build": "vite build --base=./",</code></pre>
-        <p>Or, through vite.config.js (later)</p>
+        <h1>Problems!!!</h1>
     </section>
-</section>
-<section>
-    <section>
-        <h1>Meant for dynamic sites</h1>
-        <h2>Problem 2</h2>
-    </section>
-    <section>
-        <p>Vite really focuses on DYNAMIC sites</p>
-        <p>Even CSS &amp; images are imported</p>
-        <p>(yes, you can write <code>import me from "selfie.png")</code></p>
-        <p>(or, <code>import "styles.css" in your JS)</code></p>
-        <p>But that's often overkill</p>
-    </section>
-    <section>
-        <h3>The problem</h3>
-        <p>Vite will not include files that are not imported</p>
-        <p><strong>UNLESS YOU PUT THE IN A FOLDER CALLED <code>public</code></strong></p>
-        <p>And then, reference those files without <code>public</code></p>
-        <p>All files in <code>public/</code> will be copied (as is) to <code>dist/</code> when building</p>
-    </section>
-</section>
-<section>
-    <section>
-        <h1>One HTML file</h1>
-        <h2>Problem 3</h2>
-    </section>
+
+    <AgendaSection header="Must be hosted at /" h2="Problem 1">
+        <section>
+            <h3>Building for sub-folders</h3>
+            <p>Vite (and all similar tools) will assume you host your files at /</p>
+            <p>e.g. <code>https://project.domain.com</code></p>
+            <p>e.g. <code>https://domain.com</code></p>
+            <p>We can change that by passing a <code>base</code> to the build command in package.json:</p>
+            <pre><code class="bash">"build": "vite build --base=./",</code></pre>
+            <p>Or, through vite.config.js (later)</p>
+        </section>
+    </AgendaSection>
+
+    <AgendaSection header="Meant for dynamic sites" h2="Problem 2">
+        <section>
+            <p>Vite really focuses on DYNAMIC sites</p>
+            <p>Even CSS &amp; images are imported</p>
+            <p>(yes, you can write <code>import me from "selfie.png")</code></p>
+            <p>(or, <code>import "styles.css" in your JS)</code></p>
+            <p>But that's often overkill</p>
+        </section>
+        <section>
+            <h3>The problem</h3>
+            <p>Vite will not include files that are not imported</p>
+            <p><strong>UNLESS YOU PUT THEM IN A FOLDER CALLED <code>public</code></strong></p>
+            <p>And then, reference those files without <code>public</code></p>
+            <p>All files in <code>public/</code> will be copied (as is) to <code>dist/</code> when building</p>
+        </section>
+    </AgendaSection>
+
+<AgendaSection header="One HTML file" h2="Problem 3">
     <section class="small">
         <h3>Multiple HTML files?</h3>
         <p>Vite assumes 1, if you have more, we need to tell it</p>
@@ -547,10 +531,11 @@ h1.textContent = isitfriday() ? "hell yeah": ":-(";
         <ol>
             <li>create a <code>vite.config.js</code> file</li>
             <li>Add the following</li>
-            <Code code={snippets["vite-config.js"]}/>
-            <li></li>
+        </ol>    
+        <Code code={snippets["vite-config.js"]}/>
+        <ol start="3">
     <li>Add/adjust as needed</li>
         </ol>
     </section>
-</section>
+</AgendaSection>
 </SlideLayout>
