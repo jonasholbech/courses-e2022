@@ -14,7 +14,8 @@
     "deploy": "node deploy.js",
     "createPDFs": "npm-run-all -p --race dev startServerScanFolders",
     "startServerScanFolders": "sleep 5 && node scanFolders.js",
-    "pdf": "decktape reveal --size=1280x1280 "
+    "pdf": "decktape reveal --size=1280x1280 ",
+    "todo": "limit create pdfs? only one? only one folder?"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.2.2",
