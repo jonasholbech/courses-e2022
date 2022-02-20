@@ -2,8 +2,10 @@
 import SlideLayout from "../../../layouts/SlideLayout.astro"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
-
+import AgendaSection from "../../../components/AgendaSection.astro";
 import Explainer from "../../../components/Explainer.svelte";
+import PayButton from "./components/PayButton.astro";
+import FlightButton from "./components/FlightButton.astro";
 const snippets = await codeFetcher("t7/12.microinteractions",[
     
 ]);
@@ -13,7 +15,7 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
 <SlideLayout title="Micro Interactions">
 
 <section>
-    <h1>Micro</h1><h2>interactions</h21>
+    <h1>Micro</h1><h2>interactions</h2>
     
 </section>
 
@@ -22,6 +24,7 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     <h3>Today</h3>
     <ol>
         <li>Micro-interactions</li>
+        <li>Examples</li>
         <li>Box model</li>
         <li>Dev Tools</li>
         <li>Introduction to the assignment</li>
@@ -89,6 +92,12 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
 <section>
     <section>
         <h1>Examples</h1>
+    </section>
+    <section>
+        <PayButton client:visible />
+    </section>
+    <section>
+        <FlightButton client:visible />
     </section>
     <section>
         <p><a href="https://codemyui.com/tag/microinteractions/">https://codemyui.com/tag/microinteractions/</a></p>
