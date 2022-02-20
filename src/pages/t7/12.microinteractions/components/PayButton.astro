@@ -1,14 +1,9 @@
 
     <style>
       :root {
-        --light-green: #247f5e;
         --dark-green: #0b5137;
       }
-      body {
-        background: var(--light-green);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-      }
+     
       button {
         color: white;
         background: var(--dark-green);
@@ -63,16 +58,29 @@
         }
       }
 
-      div {
+    /* LAYOUT FOR THE SLIDE */
+      div.payButton {
         display: flex;
         justify-content: center;
         align-content: center;
       }
+      .container {
+        display:flex;
+        flex-direction: column;
+      }
+      [type="checkbox"] {
+        margin-bottom:3rem;
+      }
+      [type="checkbox"]:checked ~ div button {
+        overflow:visible;
+      }
     </style>
-
-    <div>
-      <button id="payButton">
-        <svg
+    <div class="container">
+      <label for="showHidden1">overflow:visible;</label>
+      <input type="checkbox" id="showHidden1">
+      <div class="payButton">
+        <button id="payButton">
+          <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
           height="50"
@@ -102,6 +110,8 @@
         <span>Add To Cart</span>
       </button>
     </div>
+  </div>
+
     <script>
       document
         .querySelector("#payButton")
