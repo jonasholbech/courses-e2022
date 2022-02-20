@@ -23,38 +23,43 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     
     <h3>Today</h3>
     <ol>
+        <li>Tomorrow</li>
         <li>Micro-interactions</li>
         <li>Examples</li>
-        <li>Box model</li>
-        <li>Dev Tools</li>
+        <!-- <li>Box model</li>
+        <li>Dev Tools</li> -->
         <li>Introduction to the assignment</li>
         <li>Tomorrow</li>
     </ol>
 </section>
 
 <section>
+    <h1>Tomorrow</h1>
+    <p>online</p>
+    <p>Short presentation at 14:00</p>
+    <p>Jonas available on Teams</p>
+</section>
+<AgendaSection header="Micro" h2=" Interactions">
     <section>
-    <h3>What are Micro-Interactions?</h3>
+        <h3>What are Micro-Interactions?</h3>
 
-    <blockquote>Micro-Interactions are like any other interactions with devices, which are used to communicate meaningful feedback to the users because a user has to constantly know what happens when an action is performed. It’s a human tendency to expect something to happen when you click a button, scroll a page, add an item to the cart, left swipe a card.</blockquote>
+        <blockquote>Micro-Interactions are like any other interactions with devices, which are used to communicate <span class="fragment highlight-red">meaningful feedback</span> to the users because a user has to constantly <span class="fragment highlight-green">know what happens</span> <span class="fragment highlight-blue">when an action is performed</span>. It’s a human tendency to expect something to happen when you click a button, scroll a page, add an item to the cart, left swipe a card.</blockquote>
     </section>    
     <section>
-    <p>Micro interactions have four parts:</p>
+        <p>Micro interactions have four parts:</p>
         <img data-src="/assets/t7/12.microinteractions/triggers.png" alt="" />
     </section>
-</section>
-<section>
+</AgendaSection>
+<AgendaSection header="Triggers">
     <section>
-        <h1>Triggers</h1>
+        <ul>
+            <li><strong>Triggers</strong> initiate a microinteraction. Triggers can be user-initiated or system initiated.</li> 
+            <li>In a user-initiated trigger, the user has to initiate an action.</li>
+            <li>In a system-initiated trigger, software detects certain qualifications are being met and initiates an action.</li>
+        </ul>
+        <p class="fragment">?</p>
     </section>
-    <section>
-    <ul>
-        <li><strong>Triggers</strong> initiate a microinteraction. Triggers can be user-initiated or system initiated.</li> 
-    <li>In a user-initiated trigger, the user has to initiate an action.</li>
-    <li>In a system-initiated trigger, software detects certain qualifications are being met and initiates an action.</li>
-</ul>
-    </section>
-</section>
+</AgendaSection>
 
 <section>
     <section>
@@ -62,8 +67,9 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     </section>
     <section>
         <ul>
-        <li><strong>Rules</strong> determine what happens once a microinteraction is triggered.</li>
+            <li><strong>Rules</strong> determine what happens once a microinteraction is triggered.</li>
         </ul>
+        <p class="fragment">?</p>
     </section>
 </section>
 
@@ -73,8 +79,9 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     </section>
     <section>
         <ul>
-        <li><strong>Feedback</strong> lets people know what’s happening. Anything a user sees, hears, or feels while a microinteraction is happening is feedback.</li>
+            <li><strong>Feedback</strong> lets people know what's happening. Anything a user sees, hears, or feels while a microinteraction is happening is feedback.</li>
         </ul>
+        <p class="fragment">?</p>
     </section>
 </section>
 
@@ -84,14 +91,19 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     </section>
     <section>
         <ul>
-        <li><strong>Loops and Modes</strong> determine the meta-rules of the microinteraction. What happens to a microinteraction when conditions change?</li>
+            <li><strong>Loops and Modes</strong>: A loop determines the length of the microinteraction. It determines whether the interaction repeats or if it changes over time</li>
         </ul>
+        <p class="fragment">?</p>
     </section>
 </section>
 
-<section>
+<AgendaSection header="Examples">
+    
     <section>
-        <h1>Examples</h1>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxPWjeZ" data-user="jonasholbech" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/jonasholbech/pen/xxPWjeZ">microinteractions</a> by Jonas Holbech (<a href="https://codepen.io/jonasholbech">@jonasholbech</a>)</span>
+        </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </section>
     <section>
         <PayButton client:visible />
@@ -99,13 +111,13 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
     </section>
     <section>
         <FlightButton client:visible />
-        <p><a href="https://github.com/jonasholbech/courses-s2022/blob/main/src/pages/t7/12.microinteractions/components/FlightButton.astro">GitHub</a></a></p>   
+        <p><a href="https://github.com/jonasholbech/courses-s2022/blob/main/src/pages/t7/12.microinteractions/components/FlightButton.astro">GitHub</a></p>   
     </section>
     <section>
         <p><a href="https://codemyui.com/tag/microinteractions/">https://codemyui.com/tag/microinteractions/</a></p>
     </section>
-</section>
-<section>
+</AgendaSection>
+<!-- <section>
     <section>
         <h1>The Box-Model</h1>
     </section>
@@ -123,13 +135,18 @@ const snippets = await codeFetcher("t7/12.microinteractions",[
         <p>Do you know it?</p>
     </section>
 </section>
-<section>
+ --><section>
     <section>
         <h2>Introduction to the assignment</h2>
     </section>
 </section>
 <section>
+    <section>
     <h1>Tomorrow</h1>
+    <p>online</p>
+    <p>Short presentation at 14:00</p>
+    <p>Jonas available on Teams</p>
+</section>
 </section>
 
 </SlideLayout>
