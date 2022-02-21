@@ -2,6 +2,7 @@
 import SlideLayout from "../../../layouts/SlideLayout.astro"
 import Goal from "../../../components/Goal.astro"
 import AgendaSection from "../../../components/AgendaSection.astro"
+import SlideControls from "../../../components/SlideControls.astro"
 import Explainer from "../../../components/Explainer.svelte"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
@@ -28,6 +29,7 @@ const snippets = await codeFetcher("digital-design/notes",[
         <section>
         <h4>topics</h4>
         <ol>
+            <li>Who am I</li>  
             <li>What is svelte</li>
             <li>The documentation / tutorial</li>
             <li>Extensions / VSCode setup</li>
