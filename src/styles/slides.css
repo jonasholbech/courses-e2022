@@ -125,15 +125,13 @@ rect {
 .reveal .lowercase {
   text-transform: lowercase;
 }
-/* .alternate > li:nth-child(odd) {
-  color: #1b91ff;
+/* .reveal ol.alternate > li:nth-child(odd),
+.reveal ul.alternate > li:nth-child(odd) {
 }
-.alternate > p:nth-child(odd) {
-  background-color: hsla(0, 0%, 23%);
-}
-.alternate > p:nth-child(even) {
-  background-color: hsla(0, 0%, 13%);
+.reveal ol.alternate > li:nth-child(even),
+.reveal ul.alternate > li:nth-child(even) {
 } */
+
 .codelink {
   font-size: 0.9rem;
 }
