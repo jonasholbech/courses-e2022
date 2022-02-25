@@ -1,6 +1,7 @@
 # build output
 dist
 pdfs
+tests
 
 # dependencies
 node_modules/

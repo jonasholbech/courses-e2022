@@ -4,7 +4,6 @@ import Goal from "../../../components/Goal.astro"
 import AboutMe from "../../../components/AboutMe.astro"
 import AgendaSection from "../../../components/AgendaSection.astro"
 import SlideControls from "../../../components/SlideControls.astro"
-import Explainer from "../../../components/Explainer.svelte"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 
@@ -19,7 +18,7 @@ const snippets = await codeFetcher("digital-design/1.introduktion",[
 
 ---
 
-<SlideLayout title="Introduktion">
+<SlideLayout title="Introduktion" lang="da">
     <AgendaSection header="Svelte" h2="Introduktion" p="jofh@kea.dk">
         <section>
           <AboutMe /> 

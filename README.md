@@ -1,5 +1,8 @@
 # TODO
 
+- skal tests uploades?
+- pupeteer til at uploade til fronter? nok virkelig skidt ide
+  - men når vi skifter til sharepoint kan det gøres gennem onedrive?
 - Gauge component laves (og bruges) der er lavet scafolding)
 - plugins: chalkboard, reveal menu
 - configurations file til paths
