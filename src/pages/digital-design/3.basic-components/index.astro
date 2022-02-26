@@ -1,10 +1,7 @@
 ---
 import SlideLayout from "../../../layouts/SlideLayout.astro"
 import Goal from "../../../components/Goal.astro"
-
 import AgendaSection from "../../../components/AgendaSection.astro"
-
-import Explainer from "../../../components/Explainer.svelte"
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 
@@ -20,25 +17,43 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
     "props-1.svelte",
     "props-2.svelte",
     "props-3.svelte",
+    "Interpolation.svelte",
 ])
 
 ---
 
 <SlideLayout title="Basic Components" lang="da">
     <AgendaSection h2="Basic Components" p="jofh@kea.dk">
-        <section>
-          <Goal>
-            <ol>
-                <li>Forstå hvordan components er bygget op</li>
-                <li>Forstå <code>import</code></li>
-                <li>Forstå <code>props</code></li>
-                <li>Forstå hvordan <code>&lt;slot&gt;</code>'s virker</li>
-            </ol>
-          </Goal>
-        </section>
+        <Goal>
+        <ol>
+            <li>Forstå hvordan components er bygget op</li>
+            <li>Forstå <code>import</code></li>
+            <li>Forstå <code>interpolation</code></li>
+            <li>Forstå <code>props</code></li>
+            <li>Forstå hvordan <code>&lt;slot&gt;</code>'s virker</li>
+        </ol>
+        </Goal>
     </AgendaSection>
    
    <AgendaSection header="Struktur">
+        <section>
+            <h3>Regler for components</h3>
+            <ol>
+                <li>Filnavnet starter med stort</li>
+                <li>og slutter med .svelte</li>
+                <li>eks. <code>Card.svelte</code></li>
+                <li>Når vi bruger vores components (snart) skal "tagget" altid lukkes</li>
+                <li><code class="fragment strike">&lt;Card&gt;</code> <span class="fragment"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-exclamation-octagon-fill" viewBox="0 0 16 16">
+  <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg></span></li>
+                <li><code>&lt;Card /&gt;</code> <span class="fragment"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" fill="rgb(12, 159, 44)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg></span></li>
+                <li><code>&lt;Card&gt;&lt;/Card&gt;</code> <span class="fragment"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" fill="rgb(12, 159, 44)" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg></span></li>
+            </ol>
+        </section>
     <section>
         <p>I Svelte er hver component bygget op af 3 sektioner</p>
         <ol>
@@ -79,10 +94,30 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
         </section>
         <section>
             <p>Lad os prøve en gang</p>
+            <p>Note to self: husk scoped styling</p>
         </section>
     </AgendaSection>
 
-    <AgendaSection header="Øvelse" p="TODO:"></AgendaSection>
+    <AgendaSection header="Øvelse" p="Genbrug dit eksisterende Svelte projekt eller lav et nyt">
+        <section>
+            <ol>
+                <li>I <code>App.svelte</code>, skriv HTML'en til en simpel header, article og footer</li>
+                <li>Put en <code>&lt;button&gt;</code> i hver</li>
+                <li>Giv den minimal CSS i <code>global.css</code></li>
+                <li>En af gangen (MyHeader, MyArticle, MyFooter, MyButton):<ul>
+                    <li>Bryd det op i components, eks <code>MyHeader.svelte</code></li>
+                    <li>Importér det i <code>App.svelte</code></li>
+                    <li>Og brug den, eks <code>&lt;MyHeader /&gt;</code></li>
+                </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Opsamling</h2>
+            <p>Virkede det?</p>
+        </section>
+
+    </AgendaSection>
 
     <AgendaSection header="<code>slots</code>">
         <section>
@@ -101,8 +136,33 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
         </section>
     </AgendaSection>
 
-    <AgendaSection header="Øvelse" />
+    <AgendaSection header="Øvelse">
+        <section>
+            <ol>
+                <li>Lav din <code>MyButton</code> component om så den benytter &lt;slot /&gt;</li>
+                <li>I de components der benytter <code>MyButton</code>, giv knapperne noget ny tekst</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Opsamling?</h2>
+        </section>
+    </AgendaSection>
 
+    <AgendaSection h2="interpolation">
+        <section>
+            <blockquote>
+                 <p><strong>interpolation</strong></p>
+                <p><code>/ɪntəːpəˈleɪʃ(ə)n/</code></p>
+                <p>noun<br>
+                "the insertion of something of a different nature into something else."</p>
+            </blockquote>
+        </section>
+        <section>
+            <p>In Svelte, when we have dynamic data, we use it in our HTML by wrapping it in {`{ }`}</p>
+            <Code code={snippets["Interpolation.svelte"]} />
+        </section>
+    </AgendaSection>
+    
     <AgendaSection header="<code>props</code>">
         <section>
             <ul>
@@ -110,6 +170,7 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
                 <li>Men ofte vil vi gerne have bestemte strukturer i vores markup</li>
                 <li>Til det bruger vi <code>props</code></li>
                 <li><code>props</code> er variabler vi kan bruge i vores component</li>
+                <li>De bliver sendt fra forældrene til børnene</li>
             </ul>
         </section>
         <section>
@@ -134,7 +195,7 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
         
         <section>
             <h4>receiving props</h4>
-                <Code code={snippets["props-3.svelte"]} lineNumbers="3-5|9-11" />
+                <Code code={snippets["props-3.svelte"]} lineNumbers="3-6|10-12" />
             <div class="fragment">
                 <h4>sending props</h4>
                 <Code code={snippets["props-2.svelte"]}  />
@@ -144,9 +205,19 @@ const snippets = await codeFetcher("digital-design/3.basic-components",[
         <section>
             <h2>Lad os prøve</h2>
         </section>
+        <section>
+            <p>og kigge i dev tools</p>
+        </section>
     </AgendaSection>
 
-    <AgendaSection header="Øvelse" />
+    <AgendaSection header="Øvelse">
+        <section>
+            <ol>
+                <li>Lav din <code>Article.svelte</code> component smartere, så den modtager lidt data</li>
+                <li>Brug <code>&lt;article /&gt;</code> flere gange i <code>App</code> og sæt nogle forskellige værdier for de props du har defineret</li>
+            </ol>
+        </section>
+    </AgendaSection>
 
     <section><h1>Lad os kigge på vores mål</h1></section>
 </SlideLayout>

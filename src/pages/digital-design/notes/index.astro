@@ -16,32 +16,24 @@ const snippets = await codeFetcher("digital-design/notes",[
 <SlideLayout title="Notes">
    
     <!-- 
-        https://github.com/iamshaunjp/svelte-tutorial/blob/lesson-22/ninjapolls/src/shared/Button.svelte
-        <section>
-        <h4>topics</h4>
-        <li>Assignments</li>
+      <li>Assignments</li>
         1: tag vores (evt deres) html og lave til componenter
         2: byg de her x components: foot, button, navbar
         3: lav varianter
         4: docu site
         <ol>
-
-            //lat et lille site de kan kigge på til opstart
-            https://svelte.dev/repl/60823544d4424d8a9bb233a41175f8a8?version=3.46.4
-            skal hellere laves ved at de cloner/forker, ellæers kan jeg ikke have global css
-
+            
+            
             //Inner circle, need to knwo
             <li>The documentation / tutorial</li>
-            <li>self closing tags</li>
-            <li>scoped styling</li> 
-            <li>custom classes / classes based on props</li>
+            
 
             //outer circle, nice to know
             <li>#if :else</li>
             <li>each blocks</li>
             <li>reactivity</li>
             <li>events</li>
-            
+            <li>transition directives</li>  
             //middle circle, good to know
             <li>Deployment</li>
             <li>Made with svelte?</li>
@@ -50,6 +42,7 @@ const snippets = await codeFetcher("digital-design/notes",[
     </section>
 
     <section>
+    https://github.com/iamshaunjp/svelte-tutorial/blob/lesson-22/ninjapolls/src/shared/Button.svelte
         <h4>custom classes</h4>
         <button class="btn" class:variant>lovligt</button>
         <button class="btn" class:variant class={`{type}`}>ulovligt (flere identiske attr)</button>

@@ -1,6 +1,7 @@
 <script>
   //this is where we write our scripts
   //import other components etc
+  //but it's not like we're used to
 </script>
 
 <article class="feature">

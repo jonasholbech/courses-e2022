@@ -10,21 +10,22 @@ import Code from "../../../components/Code.astro";
 
 const snippets = await codeFetcher("digital-design/2.setup",[
     "settings.json",
-    "install.sh"
+    "install.sh",
+    "App.svelte"
 ])
 
 ---
 
 <SlideLayout title="Setup" lang="da">
     <AgendaSection header="Svelte" h2="Setup" p="jofh@kea.dk">
-        <section>
-          <Goal>
-            <ol>
-              <li>Vide hvordan man starter et nyt projekt</li>
-              <li>Installere plugins til VS Code</li>
-            </ol>
-          </Goal>
-        </section>
+        
+        <Goal>
+        <ol>
+            <li>Vide hvordan man starter et nyt projekt</li>
+            <li>Installere plugins til VS Code</li>
+        </ol>
+        </Goal>
+    
     </AgendaSection>
     <AgendaSection header="Plugins">
         <section>
@@ -55,7 +56,7 @@ const snippets = await codeFetcher("digital-design/2.setup",[
             </ol>
         </section>
     </AgendaSection>
-
+    <AgendaSection header="Lyn-Øvelse" p="Instalér de to plugins" />
     <AgendaSection header="Start et nyt projekt">
         <section>
             <p><a href="https://svelte.dev/">https://svelte.dev/</a></p>
@@ -72,8 +73,26 @@ const snippets = await codeFetcher("digital-design/2.setup",[
         </section>
     </AgendaSection>
 
-    <AgendaSection header="Øvelse" p="Start et nyt projekt, åbn det i VS Code og kig rundt">
-        
+    <AgendaSection header="Øvelse">
+        <section>
+            <ol>
+                <li>Start et nyt projekt, åbn det i VS Code og kig rundt</li>
+                <li>Hvor er <code>&lt;html&gt;</code> og <code>&lt;head&gt;</code>?</li>
+                <li>Hvor er dit stylesheet?</li>
+                <li>Ret lidt i <code>App.svelte</code> og tjek at den opdaterer</li>
+                <li>Tilføj følgende til <code>App.svelte</code> for at få en lille idé om hvad svelte kan</li>
+            </ol>
+            <Code code={snippets["App.svelte"]} />
+        </section>
     </AgendaSection>
+    <section>
+        <h3>folder structure</h3>
+        <dl>
+            <dt><code>public/</code></dt>
+            <dd>Her lægger vi al css, billeder, fonte etc<br><code>global.css</code> er vores overordnede stylesheet</dd>
+            <dt><code>src/</code></dt>
+            <dd>her lægger vi vores Svelte components</dd>
+        </dl>
+    </section>
     <section><h1>Lad os kigge på vores mål</h1></section>
 </SlideLayout>

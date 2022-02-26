@@ -1,5 +1,6 @@
 <script>
   //Card.svelte
+  //De her variabler kommer fra faderen
   export let title;
   export let price;
   export let inStock;
