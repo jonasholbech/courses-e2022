@@ -146,6 +146,16 @@ rect {
 .reveal .slides h1.small {
   font-size: 3em;
 }
+.reveal .slides .left {
+  text-align: left;
+}
+.reveal .slides .left h1,
+.reveal .slides .left h2,
+.reveal .slides .left h3,
+.reveal .slides .left h4,
+.reveal .slides .left .flash {
+  text-align: center;
+}
 /*FLEX-GRID*/
 .flex-grid {
   display: flex;
@@ -221,16 +231,8 @@ rect {
   }
   
   
-  .reveal .slides .left {
-    text-align: left;
-  }
-  .reveal .slides .left h1,
-  .reveal .slides .left h2,
-  .reveal .slides .left h3,
-  .reveal .slides .left h4,
-  .reveal .slides .left .flash {
-    text-align: center;
-  }
+ 
+
   
   
   

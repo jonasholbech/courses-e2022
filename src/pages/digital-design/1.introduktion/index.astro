@@ -12,6 +12,7 @@ const snippets = await codeFetcher("digital-design/1.introduktion",[
     "cards.html",
     "Card.svelte",
     "Cards.svelte",
+    "Cards2.svelte",
     "calculator.html",
     "Calculator.svelte",
 ])
@@ -90,6 +91,11 @@ const snippets = await codeFetcher("digital-design/1.introduktion",[
         <p>Fra markup til components, #3</p>
         <Code dataId="markup2comp" code={snippets["Cards.svelte"]} />
         <p>Og så kan vi bruge vores component lidt som om det var HTML</p>
+      </section>
+      <section data-auto-animate>
+        <p>Fra markup til components, #4</p>
+        <Code dataId="markup2comp" code={snippets["Cards2.svelte"]} />
+        <p>Og på sigt give dem attributter (props) så de får forskelligt indhold</p>
       </section>
     </AgendaSection>
     <AgendaSection header="No virtual DOM">

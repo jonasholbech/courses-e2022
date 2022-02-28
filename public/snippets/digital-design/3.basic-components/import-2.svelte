@@ -1,6 +1,6 @@
 <script>
   //App.svelte
-  import "./MyButton.svelte";
+  import MyButton from "./MyButton.svelte";
 </script>
 
 <header>
