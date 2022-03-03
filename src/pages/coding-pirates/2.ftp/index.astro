@@ -1,0 +1,121 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro"
+import Goal from "../../../components/Goal.astro"
+import AgendaSection from "../../../components/AgendaSection.astro"
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+
+const snippets = await codeFetcher("coding-pirates/2.ftp",[
+   
+])
+
+---
+
+<SlideLayout title="FTP" lang="da">
+    <AgendaSection header="FTP">
+        <section>
+            <p>I dag</p>
+            <ol>
+                <li>Vi lægger vores (flotte) site online</li>
+                <li>Links</li>
+                <li>Mere CSS</li>
+            </ol>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Hvad kan vi?">
+        <section>
+            <h3>HTML</h3>
+            <ul>
+                <li>h1</li>
+                <li>h2</li>
+                <li>h3</li>
+                <li>h4</li>
+                <li>h5</li>
+                <li>h6</li>
+                <li>p</li>
+                <li>img</li>
+            </ul>
+        </section>
+        <section>
+            <h3>CSS</h3>
+            <ul>
+                <li>border: 2px solid red;</li>
+                <li>color: yellow;</li>
+                <li>background-color: blue;</li>
+            </ul>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Install Time">
+        <section>
+            <p>Vi skal lige have installeret en ting til</p>
+            <ol>
+                <li>FileZilla (Client) <a href="https://filezilla-project.org/">https://filezilla-project.org/</a></li>
+            </ol>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Hvad er en server?">
+        <section>
+            
+        </section>
+        
+    </AgendaSection>
+    <AgendaSection header="Start et nyt projekt">
+        <section>
+            <p>Live</p>
+            <ol>
+                <li>Ny fil =&gt; <code>index.html</code></li>
+                <li><kbd>!</kbd>, <kbd>Tab</kbd></li>
+                <li>Ret <code>&lt;title&gt;</code></li>
+                <li>Tilføj noget a la følgende til <code>&lt;body&gt;</code><br>
+                <pre><code class="html">&lt;h1&gt;Hej Verden!!!&lt;/h1&gt;</code></pre>
+                </li>
+                <li>Og klik på "Go Live"</li>
+            </ol>
+        </section>
+    </AgendaSection>
+   
+    
+</SlideLayout>
+
+<!--
+    FTP
+
+Mere html
+
+- a
+- div
+- youtube embed
+
+mere css
+
+- gradient generator
+    - [https://cssgradient.io/](https://cssgradient.io/)
+- padding
+- margin
+- width
+- border-right etc
+- “inheritance”
+- .class
+-->
+
+<!-- install
+
+<style>
+- background-color: 
+- color
+- border
+</style>
+
+.class {
+
+}
+
+Opgave
+    om mig
+Lektier
+
+- Find et emne du vil lave en hjemmeside om
+
+Spørgsmål
+
+- hvad vil du lave en hjemmeside om? -->
