@@ -6,7 +6,13 @@ import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
 
 const snippets = await codeFetcher("coding-pirates/2.ftp",[
-   
+   "links1.html",
+   "links2.html",
+   "links3.html",
+   "margin.css",
+   "padding.css",
+   "width.css",
+   "height.css",
 ])
 
 ---
@@ -25,23 +31,23 @@ const snippets = await codeFetcher("coding-pirates/2.ftp",[
     <AgendaSection header="Hvad kan vi?">
         <section>
             <h3>HTML</h3>
-            <ul>
-                <li>h1</li>
-                <li>h2</li>
-                <li>h3</li>
-                <li>h4</li>
-                <li>h5</li>
-                <li>h6</li>
-                <li>p</li>
-                <li>img</li>
+            <ul class="pills">
+                <li class="fragment">h1</li>
+                <li class="fragment">h2</li>
+                <li class="fragment">h3</li>
+                <li class="fragment">h4</li>
+                <li class="fragment">h5</li>
+                <li class="fragment">h6</li>
+                <li class="fragment">p</li>
+                <li class="fragment">img</li>
             </ul>
         </section>
         <section>
             <h3>CSS</h3>
-            <ul>
-                <li>border: 2px solid red;</li>
-                <li>color: yellow;</li>
-                <li>background-color: blue;</li>
+            <ul class="pills">
+                <li class="fragment">border: 2px solid red;</li>
+                <li class="fragment">color: yellow;</li>
+                <li class="fragment">background-color: blue;</li>
             </ul>
         </section>
     </AgendaSection>
@@ -53,46 +59,135 @@ const snippets = await codeFetcher("coding-pirates/2.ftp",[
             </ol>
         </section>
     </AgendaSection>
-    <AgendaSection header="Hvad er en server?">
+    <AgendaSection header="Hvad er FTP?">
         <section>
-            
+            <h2>FTP</h2>
+            <p><span class="fragment">File</span> <span class="fragment">Transfer</span> <span class="fragment">Protocol</span></p>
+            <p class="fragment">Det er en af måderne vi kan lægge vores sites online</p>
+            <p class="fragment">FileZilla er et at programmerne der tillader det</p>
         </section>
-        
     </AgendaSection>
-    <AgendaSection header="Start et nyt projekt">
+    <AgendaSection header="Server / Client">
         <section>
-            <p>Live</p>
-            <ol>
-                <li>Ny fil =&gt; <code>index.html</code></li>
-                <li><kbd>!</kbd>, <kbd>Tab</kbd></li>
-                <li>Ret <code>&lt;title&gt;</code></li>
-                <li>Tilføj noget a la følgende til <code>&lt;body&gt;</code><br>
-                <pre><code class="html">&lt;h1&gt;Hej Verden!!!&lt;/h1&gt;</code></pre>
-                </li>
-                <li>Og klik på "Go Live"</li>
+            <p>Internettet er bygget op af servere og klienter</p>
+            <p>Serverer, servérer filer til klienter</p>
+            <p>Klienter er vores browsere, mobiltelefoner etc</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Uploade vores projekt">
+        <section>
+            <div><ol>
+                <li>Åbn FileZilla</li>
+                <li>Indtast følgende</li>
             </ol>
+            <img src="/assets/coding-pirates/2.ftp/filezilla1.png" alt="">
+            </div>
+            <dl>
+                <dt>Host</dt>
+                <dd>ftp.piratkode.dk</dd>
+                <dt>Username</dt>
+                <dd>DIG@piratkode.dk</dd>
+                <dt>Password</dt>
+                <dd>...</dd>
+                <dt>Port</dt>
+                <dd>21</dd>
+            </dl>
+            <div>
+                <ol start="3">
+                    <li>Tryk Quickconnect</li>
+                </ol>
+            </div>
         </section>
     </AgendaSection>
    
-    
+    <AgendaSection header="Links" p="<code>a</code>">
+        <section>
+            <p>Den måde vi linker "dokumenter" på er ved hjælp at &lt;a&gt; tags</p>
+            <Code code={snippets["links1.html"]} language="html"/>
+            <div class="fragment">
+                <Code  code={snippets["links2.html"]} language="html"/>
+            </div>
+            <div class="fragment">
+                <Code code={snippets["links3.html"]} language="html"/>
+            </div>
+        </section>
+        <section>
+            <p class="fragment">Vi kan linke til andre sider:</p>
+            <p class="fragment">&lt;a href="https://https://www.youtube.com/watch?v=dQw4w9WgXcQ"&gt;Klik her&lt;/a&gt;</p>
+            <p class="fragment">Eller vi kan linke til vores egne sider i samme mappe:</p>
+            <p class="fragment">&lt;a href="om-mig.html"&gt;Om Mig&lt;/a&gt;</p>
+            <p class="fragment">Lad os prøve</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Lad os uploade igen">
+        <section>
+            <img src="/assets/coding-pirates/2.ftp/filezilla1.png" alt="">
+        </section>
+    </AgendaSection>
+    <AgendaSection header="YouTube">
+        <section>
+            <p>Vi kan også smide YouTube videoer ind</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Luft">
+        <section>
+            <p>Vi har et par måder at skabe luft i vores design</p>
+            <div><img src="/assets/coding-pirates/2.ftp/boxmodel.png" alt="Box Model" /></div>
+            <ul>
+                <li>Margin</li>
+                <li>Padding</li>
+            </ul>
+        </section>
+        <section>
+            <h3>margin</h3>
+            <p>Luft på ydersiden af vores bokse</p>
+            <p>Syntax</p>
+            <Code code={snippets["margin.css"]} language="css" />
+        </section>
+        <section>
+            <h3>padding</h3>
+            <p>Luft på indersiden af vores bokse</p>
+            <p>Syntax</p>
+            <Code code={snippets["padding.css"]} language="css" />
+        </section>
+    </AgendaSection>
+    <AgendaSection header="Størrelser">
+        <section>
+            <h3>width</h3>
+            <p>Syntax</p>
+            <Code code={snippets["width.css"]} language="css" />
+        </section>
+        <section>
+            <h3>height</h3>
+            <p>Syntax</p>
+            <Code code={snippets["height.css"]} language="css" />
+            <p class="fragment">Lad være med at bruge den for meget 🤪</p>
+        </section>
+    </AgendaSection>
+    <AgendaSection header="div">
+        <section>
+            <p><code>&lt;div&gt;</code> er et HTML-tag vi kan bruge til at gruppere indehold</p>   
+        </section>
+    </AgendaSection>
+    <AgendaSection header="classes">
+        <section>
+
+        </section>
+    </AgendaSection>
+
 </SlideLayout>
 
 <!--
-    FTP
+   
 
 Mere html
 
-- a
 - div
-- youtube embed
 
 mere css
 
 - gradient generator
     - [https://cssgradient.io/](https://cssgradient.io/)
-- padding
-- margin
-- width
 - border-right etc
 - “inheritance”
 - .class
@@ -100,11 +195,7 @@ mere css
 
 <!-- install
 
-<style>
-- background-color: 
-- color
-- border
-</style>
+
 
 .class {
 
