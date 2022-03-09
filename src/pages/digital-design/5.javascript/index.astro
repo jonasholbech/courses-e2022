@@ -9,7 +9,7 @@ const snippets = await codeFetcher("digital-design/5.javascript",[
    "events1.svelte",
    "if.svelte",
    "Nav.svelte",
-   "EachTutorial.svelte"
+   "EachTutorial.svelte",
 ])
 const snippetsPrev = await codeFetcher("digital-design/2.setup",[
    "App.svelte"
@@ -20,8 +20,7 @@ const snippetsPrev = await codeFetcher("digital-design/2.setup",[
     <AgendaSection header="JavaScript" p="and some Svelte magic">
         <Goal>
         <ol>
-            <li>TODO:</li>
-            
+            <li>Forstå at der er mere "under the hood" i Svelte end smart markup</li>
         </ol>
         </Goal>
     </AgendaSection>
@@ -87,6 +86,11 @@ const snippetsPrev = await codeFetcher("digital-design/2.setup",[
             <p><a href="https://svelte.dev/repl/32620c2db4d54358ae11ff38d330f1bc?version=3.46.4">REPL</a></p>
         </section>
     </AgendaSection>
+    <AgendaSection header="Simple Routing" p="Poor mans routing">
+        <section>
+           <p><a href="https://svelte.dev/repl/ac9c7b886e544297ac0894cee5c34725?version=3.46.4">REPL</a></p>
+        </section>
+    </AgendaSection>
     <AgendaSection header="<code>each</code>">
         <section>
             <p><code>each</code> lader os loope over arrays, ligesom <code>forEach</code>, bare lettere</p>
@@ -101,11 +105,12 @@ const snippetsPrev = await codeFetcher("digital-design/2.setup",[
         </section>
     </AgendaSection>
     
-    <AgendaSection header="Transition directive"></AgendaSection>
-    <AgendaSection header="Routing">
+    <AgendaSection header="fetch">
         <section>
-            <p>https://svelte.dev/repl/820f79503ec3483a85dd2348ae64052e?version=3</p>
+            <p class="fragment">Ahh, come on, seriously?</p>
         </section>
     </AgendaSection>
+    <AgendaSection header="Transition directive"></AgendaSection>
+    
     <section><h1>Lad os kigge på vores mål</h1></section>
 </SlideLayout>
