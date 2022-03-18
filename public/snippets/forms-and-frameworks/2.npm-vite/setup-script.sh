@@ -1,5 +1,5 @@
 git init
-npm init @vitejs/app
+npm create vite@latest
 mkdir public
 echo "node_modules/
 .vscode/  

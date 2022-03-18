@@ -199,7 +199,6 @@ const snippets = await codeFetcher("forms-and-frameworks/2.npm-vite",[
     <AgendaSection header="Global Modules">
         <section>
             <ul>
-                <li>TODO: dad-joke-generator</li>
                 <li>You have installed <code>Node</code>, which means you have <code>NPM</code></li>
                 <li class="fragment">A global module is one you can run from anywhere (on your machine)</li>
                 <li class="fragment">The built in commands in the terminal works like global modules
@@ -247,6 +246,10 @@ const snippets = await codeFetcher("forms-and-frameworks/2.npm-vite",[
                 <code>pageres-cli</code> is run by typing <code>pageres</code>).</p>
             <p>The documentation states what you need to do.</p>
         </section>
+        <section>
+            <h2>Demo</h2>
+            <p><a href="https://www.npmjs.com/package/dad-joke-generator">https://www.npmjs.com/package/dad-joke-generator</a></p>
+        </section>
     </AgendaSection>
 
     <AgendaSection header="Exercise">
@@ -287,7 +290,7 @@ const snippets = await codeFetcher("forms-and-frameworks/2.npm-vite",[
             <Code code={snippets["package.json"]} language="json" />
         </section>
         <section>
-            <p>Hint: If you setup git / github first it will auto-fill some fields for you</p>
+            <p>Hint: If you setup git / GitHub first it will auto-fill some fields for you</p>
         </section>
 
         <section>
@@ -297,7 +300,7 @@ const snippets = await codeFetcher("forms-and-frameworks/2.npm-vite",[
             <pre><code class="bash">npm install --save-dev minify</code></pre>
         </section>
         <section>
-            <p>We can the create an entry in the "scripts" section of our package.json to run our modules</p>
+            <p>We can then create an entry in the "scripts" section of our package.json to run our modules</p>
             <Code code={snippets["package-min.json"]} language="json" />
         </section>
         <section>
@@ -371,7 +374,7 @@ npm install --save-dev vite</code></pre>
         </section>
         <section>
             <h2>Installing Vite, with a starter</h2>
-            <pre><code class="bash">npm init vite@latest</code></pre>
+            <pre><code class="bash">npm create vite@latest</code></pre>
             <p>Then follow the interactive installer</p>
         </section>
         <section>
