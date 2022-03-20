@@ -23,9 +23,8 @@ const snippets = await codeFetcher("forms-and-frameworks/4.databases",[
         <Goal>
             <ol>
                 <li>Have a shallow insight into various databases</li>
-                <li>Experience how REST operations are performed</li>
-                <li>Through Insomnia</li>
-                <li>And JS</li>
+                <li>See how REST operations are performed</li>
+                <li>Through JS</li>
             </ol>
         </Goal>
     </section>
@@ -198,22 +197,22 @@ const snippets = await codeFetcher("forms-and-frameworks/4.databases",[
     
     <AgendaSection header="<code>POST'ing data</code>">
         <section>
-            <Code code={snippets["POST.js"]} />
+            <Code code={snippets["POST.js"]} lineNumbers="1-15|1-4|7-8|10|11" />
         </section>
     </AgendaSection>
 
     <AgendaSection header="<code>PUT'ing data</code>">
         <section>
-            <Code code={snippets["PUT.js"]} stretch />
+            <Code code={snippets["PUT.js"]} stretch lineNumbers="1-18|1-6|5,8|9|13" />
         </section>
     </AgendaSection>
     
-<section>
-    <p>There are lots of services for this</p>
-    <p>restdb.io, mockapi.io, WordPress, ...</p>
-    <p>We will be using restdb.io</p>
-    <p><a href="https://restdb.io">restdb.io</a></p>
-    <p>There are some limitations on the free version, mainly "max. 1 API call per second"</p>
-</section>
+    <section>
+        <p>There are lots of services for this</p>
+        <p>restdb.io, mockapi.io, WordPress, ...</p>
+        <p>We will be using restdb.io</p>
+        <p><a href="https://restdb.io">restdb.io</a></p>
+        <p>There are some limitations on the free version, mainly "max. 1 API call per second"</p>
+    </section>
     <AgendaSection header="Let's revisit the goals" />
 </SlideLayout>

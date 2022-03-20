@@ -152,11 +152,11 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
                 We import <code>useState</code><br />
                 <pre><code class="js">{`import {useState} from "react";`}</code></pre>
                 </li>
-                <li>
+                <li class="fragment">
                 <code>useState</code> is a function that, once called returns an array
                 with two things, a state variable, and an "updater function"
                 </li>
-                <li>
+                <li class="fragment">
                 When calling <code>useState</code> we pass the initial value for our
                 state variable<br />
                 <pre><code class="js">const [myVar, myUpdater] = useState(initialValue)</code></pre>
@@ -168,7 +168,7 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
                 <li>
                 We use the "updater function" to modify state to force a re-render
                 </li>
-                <li>
+                <li class="fragment">
                 We use the "state variable" in our UI, as a condition, or simply data
                 </li>
             </ol>
@@ -184,8 +184,10 @@ const snippets = await codeFetcher("react/3.mini-animal-base",[
         <h3><code>useState, #1</code></h3>
             <h4>Initial setup</h4>
             <Code code={snippets["stateful-component-1.js"]} language="jsx" />
-            <p>And we can use the <code>count</code> variable</p>
-            <Code code={snippets["stateful-component-2.js"]} language="jsx" />
+            <div  class="fragment">
+                <p>And we can use the <code>count</code> variable</p>
+                <Code code={snippets["stateful-component-2.js"]} language="jsx" />
+            </div>
         </section>
         <section>
             <h3><code>useState, #2</code></h3>

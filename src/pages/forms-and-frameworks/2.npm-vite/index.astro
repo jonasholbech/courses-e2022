@@ -213,7 +213,7 @@ const snippets = await codeFetcher("forms-and-frameworks/2.npm-vite",[
         
         <section class="small">
             <h3>Global vs. Local</h3>
-            <ul>
+            <ul class="striped">
                 <li class="fragment">Global packages can be used everywhere, in the terminal. But only a few modules should be installed
                     globally. They take up space, needs manual updates, and it's kinda hard to cleanup.</li>
                 <li class="fragment">Local modules can only be used in the current project (but can of course be installed for every
@@ -467,6 +467,7 @@ h1.textContent = isitfriday() ? "hell yeah": ":-(";
                 <li><a href="https://nosir.github.io/cleave.js/">https://nosir.github.io/cleave.js/</a></li>
                 <li><a href="https://www.npmjs.com/package/color-convert">https://www.npmjs.com/package/color-convert</a></li>
                 <li><a href="https://www.npmjs.com/package/fireworks-js">https://www.npmjs.com/package/fireworks-js</a></li>
+                <li>Or anything you want that Klaus made you do :-)</li>
             </ul>
         </section>
     </AgendaSection>
@@ -520,7 +521,7 @@ h1.textContent = isitfriday() ? "hell yeah": ":-(";
             <p>Vite really focuses on DYNAMIC sites</p>
             <p>Even CSS &amp; images are imported</p>
             <p>(yes, you can write <code>import me from "selfie.png")</code></p>
-            <p>(or, <code>import "styles.css" in your JS)</code></p>
+            <p>(or, <code>import "styles.css"</code> in your JS)</p>
             <p>But that's often overkill</p>
         </section>
         <section>

@@ -84,40 +84,7 @@ const snippets = await codeFetcher("react/5.pagination",[
         <section>
             <h3>The Syntax</h3>
             <Code stretch code={snippets["useEffect-syntax-basic.js"]} language="jsx" />
-            <div class="fragment">
-                <Explainer client:only data={[
-                    {
-                        type:"text",
-                        x:70,
-                        y:40,
-                        text:"We import useEffect"
-                    },
-                    {
-                        type:"arrow",
-                        d:"M190,50 L220,80"
-                    },
-                    {
-                        type:"text",
-                        x:70,
-                        y:300,
-                        text:"The function to run"
-                    },
-                    {
-                        type:"arrow",
-                        d:"M160,280 L230,220"
-                    },
-                    {
-                        type:"text",
-                        x:370,
-                        y:290,
-                        text:"Every time any avariable in this array changes"
-                    },
-                    {
-                        type:"arrow",
-                        d:"M460,270 L440,220"
-                    },
-                ]} />
-            </div>
+            
             <p class="fragment" style="transform: translateY(200px)">
                 Which means, we often use an empty <code>dependencies</code> array
             </p>
