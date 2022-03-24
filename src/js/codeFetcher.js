@@ -11,4 +11,3 @@ export default async function codeFetcher(folder, data) {
   );
   return returnObj;
 }
-//TODO: skal returnere et object der også har folder, så snippets kan lave linket til GH uden at sende ekstra data

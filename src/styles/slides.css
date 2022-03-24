@@ -4,9 +4,8 @@
   --r-code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
+
 /*general elements*/
-/*TODO: make a page with "all" html elements to test*/
-/*/general elements*/
 .reveal p code,
 .reveal li code {
   color: orange;
