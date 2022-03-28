@@ -41,10 +41,11 @@
   }
 </script>
 
+<div class="container" />
 <div
   class="Timer"
   data-state={state}
-  style={`--duration: ${duration}; --elapsed: ${elapsed}; --interval:${interval}; maxWidth: ${width}; maxHeight: ${height};`}
+  style={`--duration: ${duration}; --elapsed: ${elapsed}; --interval:${interval}; --maxwidth: ${width}; --maxheight: ${height};`}
 >
   <div class="timerwrapper">
     <svg
@@ -154,6 +155,8 @@
     --progress: calc(1px - (var(--elapsed) / var(--duration)) * 1px);
     --offset: calc(1px - var(--progress) * 1px);
     flex-direction: column;
+    max-width: var(--maxwidth);
+    max-height: var(--maxheight);
   }
   .timerwrapper {
     display: grid;

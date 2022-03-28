@@ -1,0 +1,35 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import Goal from "../../../components/Goal.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import codeFetcher from "../../../js/codeFetcher";
+const snippets = await codeFetcher("react/8.deploy",[
+    
+])
+
+---
+
+<SlideLayout title="Deploy">
+    <section>
+    <h1>React</h1>
+        <img src='/assets/react/0.need-to-know-js/react.png'  alt="" />
+    </section>
+    <Goal>
+    <ol>
+        <li>TODO:</li>
+    </ol>
+    </Goal>
+    <section>
+        <h1>Build and deploy</h1>
+    </section>
+    <section>
+        <p>We can go advanced and use Github</p>
+        <p>Or just use Netlify</p>
+    </section>
+    <section>
+        <h1>?</h1>
+    </section>
+    <AgendaSection header="+3/4">
+        
+    </AgendaSection>
+</SlideLayout>

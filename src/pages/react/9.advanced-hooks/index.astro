@@ -1,0 +1,82 @@
+---
+import SlideLayout from "../../../layouts/SlideLayout.astro";
+import Goal from "../../../components/Goal.astro";
+import AgendaSection from "../../../components/AgendaSection.astro";
+import Explainer from "../../../components/Explainer.svelte";
+import codeFetcher from "../../../js/codeFetcher";
+import Code from "../../../components/Code.astro";
+const snippets = await codeFetcher("react/9.advanced-hooks",[
+    "numberContext.js",
+    "numberContextProvider.js",
+    "numberContextConsumer.js",
+])
+
+---
+
+<SlideLayout title="Advanced Hooks">
+    <section>
+        <h1>React</h1>
+        <img src='/assets/react/0.need-to-know-js/react.png'  alt="" />
+    </section>
+    <section>
+        <p>There's no way around it, this is hard</p>
+        <p>If this is where you sign off, I get it</p>
+    </section>
+    <Goal>
+        <ol>
+            <li>Understand how <code>useContext</code> works</li>
+            <li>Understand how <code>useReducer</code> works</li>
+            <li>Understand how <code>useContext</code> works with <code>useReducer</code></li>
+            <li>Understand what <code>useMemo</code> does</li>
+        </ol>
+    </Goal>
+
+    <AgendaSection header="<code>useContext</code>">
+        <section>
+           <h4>Context provides a way to pass data through the component tree without having to pass props down manually at every level.</h4>
+           <blockquote>In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.</blockquote>
+        </section>
+        <section>
+            <p>So, context is "global" state that can be accessed by any component beneath it in the tree</p>
+        </section>
+        <section>
+            <p>Working with contexts requires 3 steps</p>
+            <ol>
+                <li>Creating a context</li>
+                <li>Creating a "provider"</li>
+                <li>Consuming the context</li>
+            </ol>
+        </section>
+        <section>
+            <h3>TLDR;</h3>
+            <p>Creating a context</p>
+            <Code code={snippets["numberContext.js"]} />
+        </section>
+        <section>
+            <h3>TLDR;</h3>
+            <p>Creating a provider</p>
+            <Code code={snippets["numberContextProvider.js"]} />
+        </section>
+        <section>
+            <h3>TLDR;</h3>
+            <p>Consuming the context</p>
+            <Code code={snippets["numberContextConsumer.js"]} />
+        </section>
+    </AgendaSection>
+    
+    <AgendaSection header="<code>useReducer</code>">
+    
+    </AgendaSection>
+
+    <AgendaSection header="<code>useReducer</code> + <code>useContext</code>">
+    
+    </AgendaSection>
+
+    <AgendaSection header="<code>useMemo</code>">
+    
+    </AgendaSection>
+
+    <AgendaSection header="+3/4">
+        
+</AgendaSection>
+</SlideLayout>
