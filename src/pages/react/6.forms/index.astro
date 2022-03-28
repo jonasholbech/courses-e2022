@@ -9,7 +9,8 @@ import Code from "../../../components/Code.astro";
 const snippets = await codeFetcher("react/6.forms",[
     "useRef.js",
     "controlledComponentWithHooks.jsx",
-    "form-validation-use-effect.js"
+    "form-validation-use-effect.js",
+    "useRef-setInterval.js"
 ])
 
 ---
@@ -21,7 +22,9 @@ const snippets = await codeFetcher("react/6.forms",[
     </section>
     <Goal>
         <ol>
-            <li>//TODO:</li>
+            <li>Understand how <code>useRef</code> works</li>
+            <li>Understand how forms work with state (controlled)</li>
+            <li>Understand how forms work without state (uncontrolled)</li>
         </ol>
     </Goal>
 
@@ -47,6 +50,7 @@ const snippets = await codeFetcher("react/6.forms",[
             <li><a href="https://reactjs.org/docs/hooks-reference.html#useref">https://reactjs.org/docs/hooks-reference.html#useref</a></li>
             <li class="fragment">The returned object will persist for the full lifetime of the component.</li>
             <li class="fragment">A common use case is to access a child imperatively</li>
+            <li class="fragment">Or to store a value between renders</li>
         </ul>  
       </section>
       <section>
@@ -57,8 +61,17 @@ const snippets = await codeFetcher("react/6.forms",[
         </ul>
       </section>
       <section>
-          
-          <Code code={snippets["useRef.js"]} />
+        <Code code={snippets["useRef.js"]} />
+      </section>
+      <section>
+        <h3><code>useRef</code></h3>
+        <p>Using <code>useRef</code> to store a value across renders</p>
+        <iframe src="https://codesandbox.io/embed/timer-useref-f2030l?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="Timer useRef"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
       </section>
   </AgendaSection>
   <section>
