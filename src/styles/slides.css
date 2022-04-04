@@ -207,6 +207,22 @@ rect {
   width: 100%;
 }
 
+.code_footprint {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #808080;
+}
+.code_footprint li,
+.code_footprint ul {
+  padding: 0;
+  margin: 0;
+}
+.code_footprint h4 {
+  margin: 0;
+}
+.code_footprint .purpose {
+  grid-column: 1/-1;
+}
 /*courseSlides.css*/
 /*
 .reveal a {
@@ -353,22 +369,7 @@ rect {
   .highlight {
     color: #1b91ff;
   }
-  .code_footprint {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #808080;
-  }
-  .code_footprint li,
-  .code_footprint ul {
-    padding: 0;
-    margin: 0;
-  }
-  .code_footprint h4 {
-    margin: 0;
-  }
-  .code_footprint .purpose {
-    grid-column: 1/-1;
-  }
+  
   
   .center.single-item {
     display: grid;

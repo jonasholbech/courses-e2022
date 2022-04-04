@@ -1,13 +1,15 @@
 # TODO
 
 - skal tests uploades?
+- Tests skal
 - pupeteer til at uploade til fronter? nok virkelig skidt ide
   - men når vi skifter til sharepoint kan det gøres gennem onedrive?
 - Gauge component laves (og bruges) der er lavet scafolding)
+- timer comp skal laves responsive
 - plugins: chalkboard, reveal menu
 - configurations file til paths
 - spotlight component? https://codepen.io/xdesro/pen/955b1eecf8c811a36a0f75509a23f90a
-- deploy script localurl læses i stedetb for at sættes
+- deploy script localurl læses i stedet for at sættes
 - flyt root folder ud af deleteme
 - custom slide compoenets opdatér dokumentation
 
