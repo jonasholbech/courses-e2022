@@ -1,5 +1,5 @@
 import "./style.css";
-const APIKEY = "606d5d99f5535004310074ed";
+const APIKEY = "606d5d99f5535004310074edx";
 const endpoint = "https://frontendspring20-9cc3.restdb.io/rest/superheroes";
 
 function get() {
