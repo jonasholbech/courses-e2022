@@ -9,7 +9,7 @@ if (age % 2 === 0) {
 }
 
 let role = "visitor";
-if (email === "jofh@kea.dk.dk") {
+if (email === "jofh@kea.dk") {
   if (age > 40) {
     role = "admin";
   }

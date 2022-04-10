@@ -1,6 +1,6 @@
 const searchengines = [
   { target: "https://google.com", name: "Google" },
-  { target: "https:bing.com", name: "Bing" },
+  { target: "https://bing.com", name: "Bing" },
 ];
 let links = "";
 searchengines.forEach((link) => {
