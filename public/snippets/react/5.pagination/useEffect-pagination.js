@@ -10,6 +10,7 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => {
         setArticles((prev) => prev.concat(data));
+        //or setArticles((prev) => [...prev, ...data]);
         setLoading(false);
       });
   }, [page]);
