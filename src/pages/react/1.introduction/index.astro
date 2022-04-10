@@ -115,7 +115,8 @@ const snippets = await codeFetcher("react/1.introduction",[
             >https://github.com/facebook/create-react-app</a
         >
         </p>
-        <p>//TODO: Vite? https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13</p>
+        <p class="fragment">Vite can also handle React, but there are a few annoyances</p>
+        <!-- <p>//TODO: Vite? https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13</p> -->
     </section>
     <section>
         <h2>Warnings</h2>
@@ -170,22 +171,18 @@ const snippets = await codeFetcher("react/1.introduction",[
                 <li><a href="https://github.com/facebook/create-react-app">https://github.com/facebook/create-react-app</a></li>
                 <li><a href="https://vitejs.dev/guide/#scaffolding-your-first-vite-project">https://vitejs.dev/guide/#scaffolding-your-first-vite-project</a></li>
             </ul>
-            <p>Let's go for Vite, since we know it</p>
-            <p class="fragment">Disclaimer: I haven't tried Vite/React yet, let's see if it comes back to bite us</p>
+            <!-- <p>Let's go for Vite, since we know it</p>
+            <p class="fragment">Disclaimer: I haven't tried Vite/React yet, let's see if it comes back to bite us</p> -->
         </section>
         <section>
             <ol>
-                <li><code>npm init vite@latest</code></li>
-                <li>Pick React</li>
-                <li>Pick React</li>
-                <li><code>cd</code> to your folder</li>
-                <li><code>npm install</code></li>
-                <li><code>npm run dev</code></li>
+                <li><code>npx create-react-app myproject</code></li>
+                <li>Follow the instructions</li>
             </ol>
             
         </section>
         <section>
-            <p>And then as usual, it's just <code>npm run dev</code> to start you live server</p>
+            <p>And then, it's just <code>npm run start</code> to start you live server</p>
             <p>and <code>npm run build</code> to generate the static version</p>
             <p>Which can be deployed to e.g. Netlify</p>
         </section>

@@ -54,14 +54,14 @@ const snippets = await codeFetcher("react/4.mini-todo-list",[
             <h3>Uni-directional data flow</h3>
             <ul>
                 <li>
-                <strong>Data is sent down the tree</strong>, as props <br />(Parent =>
+                <strong>Data is sent down the tree</strong>, as props <br />(Parent =&gt;
                 Child)
                 </li>
                 <li class="fragment">
-                <strong>Data can be sent back up</strong> <br />(Child => Parent)
+                <strong>Data can be sent back up</strong>, through callbacks <br />(Child =&gt; Parent)
                 </li>
                 <li class="fragment">
-                <strong>Data can NOT be sent sideways</strong> <br /><del>(Sibling => Sibling)</del>
+                <strong>Data can NOT be sent sideways</strong> <br /><del>(Sibling =&gt; Sibling)</del>
                 </li>
             </ul>
             </section>
@@ -108,7 +108,8 @@ const snippets = await codeFetcher("react/4.mini-todo-list",[
             <Code code={snippets["passing-callbacks-vanilla.js"]} language="jsx" />
         </section>
         <section>
-            <Code stretch code={snippets["passing-callbacks.js"]} language="jsx" />
+          <p>this works bacause Components can not have eventlisteners</p>
+          <Code stretch code={snippets["passing-callbacks.js"]} language="jsx" />
         </section>
         <section>
             <p>Sometimes we have to pass them really far down the hierarchy</p>
@@ -194,6 +195,11 @@ const snippets = await codeFetcher("react/4.mini-todo-list",[
     <section>
       <p>Modifying an item from a state-array</p>
       <Code code={snippets["react-immutable-modify.js"]} language="jsx" />
+    </section>
+    <section>
+      <p>When dealing with "complex objects", e.g. objects with objects</p>
+      <p>The above is not enough, use something like</p>
+      <p><a href="https://www.npmjs.com/package/just-clone">just-clone</a></p>
     </section>
     </AgendaSection>
 

@@ -7,7 +7,7 @@ export default function StateArray() {
   ]);
   const modifyPerson = (id, newName) => {
     setPersons((prevState) =>
-      prevState.map((person) => {
+      [...prevState].map((person) => {
         if (person.id === id) {
           person.name = newName;
         }

@@ -4,7 +4,7 @@ let persons = [
   { name: "Peter", id: 3 },
 ];
 function modify(id, newName) {
-  const newPersons = persons.map((person) => {
+  const newPersons = [...persons].map((person) => {
     if (person.id === id) {
       person.name = newName;
     }

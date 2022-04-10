@@ -2,9 +2,9 @@ function Parent(props) {
   const myCallback = (e) => {
     console.log("a child sent this up", e);
   };
-  return <Child childClickHandler={myCallback} />;
+  return <Child onClick={myCallback} />;
 }
 
 function Child(props) {
-  return <button onClick={props.childClickHandler}>Click Me</button>;
+  return <button onClick={props.onClick}>Click Me</button>;
 }
