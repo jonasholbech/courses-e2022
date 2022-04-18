@@ -1,7 +1,8 @@
 ---
 import SlideLayout from "../../../layouts/SlideLayout.astro";
-import Goal from "../../../components/Goal.astro";
 import AgendaSection from "../../../components/AgendaSection.astro";
+
+import Goal from "../../../components/Goal.astro";
 import Explainer from "../../../components/Explainer.svelte";
 import codeFetcher from "../../../js/codeFetcher";
 import Code from "../../../components/Code.astro";
@@ -94,7 +95,7 @@ const snippets = await codeFetcher("react/9.advanced-hooks",[
             </ol>
         </section>
         <section>
-            <ol start="6">
+            <ol start={6}>
                 <li>The <code>useReducer</code> hook returns 2 things
                     <ul>
                         <li>The state</li>

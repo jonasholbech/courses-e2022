@@ -1,19 +1,19 @@
 const users = [
   {
     name: "Jonas",
-    age: 42
+    age: 43,
   },
   {
     name: "Birk",
-    age: 7
-  }
+    age: 10,
+  },
 ];
 
-users.forEach(function(person) {
+users.forEach(function (person) {
   console.log(person.name);
 });
 
 //can be written as
-users.forEach(person => {
+users.forEach((person) => {
   console.log(person.name);
 });

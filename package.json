@@ -16,7 +16,7 @@
     "postdeploy": "npm run createPDFs && npm run test",
     "createPDFs": "npm-run-all -p --race dev startServerScanFolders",
     "startServerScanFolders": "sleep 5 && node scanFolders.js",
-    "pdf": "decktape reveal --size=1280x1280 ",
+    "pdf": "decktape reveal --size=1280x1280 --chrome-arg=--disable-web-security ",
     "_test": "lighthouse ",
     "test": "node test.js"
   },
