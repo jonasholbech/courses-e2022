@@ -35,8 +35,8 @@ const snippets = await codeFetcher("react/9.advanced-hooks",[
 
     <AgendaSection header="<code>useContext</code>">
         <section>
-           <h4>Context provides a way to pass data through the component tree without having to pass props down manually at every level.</h4>
-           <blockquote>In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.</blockquote>
+           <h4>Context: a way to pass data through the component tree.</h4>
+           <blockquote>In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. <span class="fragment highlight-blue">Context provides a way to share values like these between components</span> without having to explicitly pass a prop through every level of the tree.</blockquote>
         </section>
         <section>
             <p>So, context is "global" variables that can be accessed by any component beneath it in the tree</p>

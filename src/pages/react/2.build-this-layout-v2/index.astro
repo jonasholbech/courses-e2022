@@ -18,6 +18,7 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
     "rendering-arrays-1.js",
     "rendering-arrays-2.js",
     "rendering-arrays-3.js",
+    "children.js",
 ])
 
 ---
@@ -41,6 +42,7 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
             <li><code>props</code></li>
             <li><code>import / export default</code></li>
             <li>prop drilling</li>
+            <li><code>children</code></li>
             <li>mapping, #1</li>
         </ol>
     </section>
@@ -161,15 +163,23 @@ const snippets = await codeFetcher("react/2.build-this-layout-v2",[
             <li>Components are an amazing way of building UI's</li>
             <li>But we need interactivity</li>
             <li>And for that we have <code>state</code> and <code>events</code></li>
+            <li class="fragment">Later</li>
         </ul>
+        </section>
+    </AgendaSection>
+
+    <AgendaSection header="<code>props.children</code>">
+        <section>
+            <p>Components receive a special prop called <code>children</code>, which contains all nested JSX</p>
+            <Code code={snippets["children.js"]} />
         </section>
     </AgendaSection>
 
     <AgendaSection header="mapping, #1">
         <section>
-      <h1><code>map</code>'ing</h1>
-      <h2>Rendering Arrays</h2>
-    </section>
+            <h1><code>map</code>'ing</h1>
+            <h2>Rendering Arrays</h2>
+        </section>
   
     <section>
       <ul>

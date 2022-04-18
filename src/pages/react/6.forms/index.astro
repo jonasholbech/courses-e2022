@@ -48,6 +48,7 @@ const snippets = await codeFetcher("react/6.forms",[
       <section>
         <ul class="striped">
             <li><a href="https://reactjs.org/docs/hooks-reference.html#useref">https://reactjs.org/docs/hooks-reference.html#useref</a></li>
+            <li><a href="https://beta.reactjs.org/learn/referencing-values-with-refs">https://beta.reactjs.org/learn/referencing-values-with-refs</a></li>
             <li class="fragment">The returned object will persist for the full lifetime of the component.</li>
             <li class="fragment">A common use case is to access a child imperatively</li>
             <li class="fragment">Or to store a value between renders</li>
@@ -59,6 +60,27 @@ const snippets = await codeFetcher("react/6.forms",[
             <li class="fragment">We use it when we really need to go into the DOM</li>
             <li class="fragment">Like for forms</li>
         </ul>
+      </section>
+      <section>
+        <p><code>useRef</code> vs <code>useState</code></p>
+        <table>
+          <thead>
+              <tr>
+                  <th><code>useRef</code></th>
+                  <th><code>useState</code></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Doesn’t trigger re-render when you change it.</td>
+                  <td>Triggers re-render when you change it.</td>
+              </tr>
+              <tr>
+                <td>Mutable—you can modify and update current’s value</td>
+                <td>“Immutable”—you must use the state setting function</td>
+              </tr>
+          </tbody>
+        </table>
       </section>
       <section>
         <Code code={snippets["useRef.js"]} />
