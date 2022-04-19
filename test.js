@@ -11,7 +11,7 @@ const topLevelDirectories = getDirectories("./src/pages");
 topLevelDirectories.forEach((url) => {
   urlsToParse = urlsToParse.concat(getDirectories(url));
 });
-console.log(urlsToParse);
+//console.log(urlsToParse);
 const testsToRun = [];
 urlsToParse.forEach((url) => {
   const parts = url.split("/");
@@ -28,9 +28,9 @@ urlsToParse.forEach((url) => {
     const testStats = statSync(`./tests/${folder}/${file}/test.html`);
     const astroStats = statSync(`./src/pages/${folder}/${file}/index.astro`);
     if (testStats.mtime > astroStats.mtime) {
-      console.log(
+      /*  console.log(
         `skipping ./tests/${folder}/${file}, it exists and test is newer`
-      );
+      ); */
     } else {
       console.log(`overwriting ./tests/${folder}/${file}/test.html`);
       testsToRun.push({ folder, file });

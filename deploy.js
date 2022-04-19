@@ -10,7 +10,7 @@ var config = {
   password: process.env.FTP_PASSWORD,
   host: process.env.FTP_HOST,
   port: 22,
-  localRoot: "/Users/holbech/deleteme/courses-s2022/dist/",
+  localRoot: "/Users/holbech/sites/courses-s2022/dist/",
   remoteRoot: "/customers/7/0/c/kea-alt-del.dk/httpd.www/courses-s2022/",
   // include: ["*", "**/*"],      // this would upload everything except dot files
   include: ["*"], //*.php", "dist/*", ".*
