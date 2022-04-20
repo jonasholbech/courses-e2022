@@ -1,5 +1,5 @@
 function setTitle(title) {
-  document.body.title = title;
+  document.title = title;
 }
 
 function isEven(number) {
