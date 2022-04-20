@@ -1,8 +1,7 @@
 /* this functions receives an object with stuff it does not need
 make it easier for the next developer by destructuring out the 
 parts we need 
-Then clean up the function by removing person.
-*/
+Then clean up the function by removing "person". */
 
 function personCard(person) {
   return `<div class="person">
@@ -21,3 +20,4 @@ const myPerson = {
   street: "secret",
   email: "clark@dailyplanet.com",
 };
+personCard(myPerson);
