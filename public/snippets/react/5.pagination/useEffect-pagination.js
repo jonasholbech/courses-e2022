@@ -19,7 +19,7 @@ export default function App() {
     <>
       <ol>
         {articles.map((art) => (
-          <li key={art.id}>{art.name}</li>
+          <li key={art.id}>{art.productdisplayname}</li>
         ))}
       </ol>
       {loading && <p>loading more data</p>}
